@@ -1,0 +1,26 @@
+plugins = []
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "."
+publishOrigin = "default"
+command = "echo \"export const ENV = { FIREBASE_API_KEY: '$FIREBASE_API_KEY', FIREBASE_AUTH_DOMAIN: '$FIREBASE_AUTH_DOMAIN', FIREBASE_PROJECT_ID: '$FIREBASE_PROJECT_ID', FIREBASE_STORAGE_BUCKET: '$FIREBASE_STORAGE_BUCKET', FIREBASE_MESSAGING_SENDER_ID: '$FIREBASE_MESSAGING_SENDER_ID', FIREBASE_APP_ID: '$FIREBASE_APP_ID', FIREBASE_MEASUREMENT_ID: '$FIREBASE_MEASUREMENT_ID' };\" > env.js"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]

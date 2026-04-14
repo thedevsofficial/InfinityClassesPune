@@ -1,0 +1,250 @@
+/* Premium Floating Background System — Performance Optimized */
+
+/* -------------------------------------
+   Cursor Blob (Desktop Only)
+-------------------------------------- */
+#cursor-blob {
+    position: fixed;
+    top: -25px;
+    left: -25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 194, 212, 0.4) 0%, rgba(146, 122, 204, 0.2) 60%, transparent 80%);
+    filter: blur(8px);
+    pointer-events: none;
+    z-index: 99999;
+    will-change: transform;
+    transform: translate(var(--cx, -1000px), var(--cy, -1000px));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* -------------------------------------
+   Unified Background System Container
+-------------------------------------- */
+.premium-float-system {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+    contain: strict;
+    will-change: transform;
+}
+
+/* Ensure container content lifts above the floating system */
+section > .container {
+    position: relative;
+    z-index: 10;
+}
+
+/* 1. Educational Doodle Pattern */
+.edu-pattern {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%233D4A6B' stroke-width='1.2' fill='none' stroke-linecap='round' stroke-linejoin='round' opacity='0.5'%3E%3Cg transform='translate(150, 40)'%3E%3Cpath d='M0 0c0-6 10-12 20-12s20 6 20 12-10 12-20 12-20-6-20-12z' transform='rotate(45 20 0)'/%3E%3Cpath d='M0 0c0-6 10-12 20-12s20 6 20 12-10 12-20 12-20-6-20-12z' transform='rotate(-45 20 0)'/%3E%3Ccircle cx='20' cy='0' r='2' fill='%233D4A6B'/%3E%3C/g%3E%3Cg transform='translate(50, 30)'%3E%3Cpath d='M20 5l20 10-20 10-20-10z'/%3E%3Cpath d='M10 15v10c0 4 5 7 10 7s10-3 10-7v-10M35 15v15'/%3E%3Ccircle cx='35' cy='30' r='1.5'/%3E%3C/g%3E%3Cg transform='translate(20, 130)'%3E%3Cpath d='M15 0c8 0 15 7 15 15 0 5-3 9-6 12v5h-18v-5c-3-3-6-7-6-12 0-8 7-15 15-15zM10 36v3h10v-3z'/%3E%3Cpath d='M10 20h10'/%3E%3C/g%3E%3Cg transform='translate(120, 140)'%3E%3Cpath d='M0 4c0 0 8-4 15 0v16c-7-4-15 0-15 0z'/%3E%3Cpath d='M30 4c0 0-8-4-15 0v16c7-4 15 0 15 0z'/%3E%3Cpath d='M15 4v16'/%3E%3C/g%3E%3Cg transform='translate(80, 80) rotate(30)'%3E%3Crect x='0' y='0' width='40' height='10' rx='2'/%3E%3Cpath d='M5 0v3M10 0v5M15 0v3M20 0v5M25 0v3M30 0v5M35 0v3'/%3E%3C/g%3E%3Ccircle cx='90' cy='20' r='1'/%3E%3Ccircle cx='180' cy='110' r='1'/%3E%3Ccircle cx='100' cy='180' r='1'/%3E%3Cpath d='M20 80l2-4 2 4 4 2-4 2-2 4-2-4-4-2z'/%3E%3Cpath d='M150 90l1-2 1 2 2 1-2 1-1 2-1-2-2-1z'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 300px 300px;
+    opacity: 0.08;
+    pointer-events: none;
+}
+
+/* 2. Micro Floating Particles — Static */
+.micro-particles {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(0, 194, 212, 0.4) 1px, transparent 2px),
+        radial-gradient(circle at 80% 35%, rgba(86, 194, 119, 0.3) 1.5px, transparent 2.5px),
+        radial-gradient(circle at 45% 70%, rgba(146, 122, 204, 0.5) 2px, transparent 3px),
+        radial-gradient(circle at 75% 65%, rgba(26, 46, 130, 0.4) 1px, transparent 2px),
+        radial-gradient(circle at 25% 85%, rgba(0, 194, 212, 0.3) 1.5px, transparent 2px);
+    background-size: 400px 400px;
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+/* 3. Light Streaks — Static */
+.light-streaks {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: 
+        linear-gradient(45deg, transparent 40%, rgba(0, 194, 212, 0.02) 45%, transparent 50%),
+        linear-gradient(-45deg, transparent 70%, rgba(146, 122, 204, 0.02) 75%, transparent 80%);
+    background-size: 50vw 50vh;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+/* -------------------------------------
+   Organic Blur Patches (Cloud Drift)
+   OPACITY: Increased to 30-35% range
+-------------------------------------- */
+.premium-patch {
+    position: absolute;
+    border-radius: 40% 60% 60% 40% / 50% 50% 60% 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+    animation: liquidBreathe 22s ease-in-out infinite alternate;
+    opacity: 0.32; /* INCREASED from 0.15 → 0.32 per user request */
+    max-width: 450px;
+    max-height: 450px;
+    contain: layout style;
+    will-change: transform, opacity;
+}
+
+@keyframes liquidBreathe {
+    0% {
+        transform: scale(1) translate(0, 0) rotate(0deg);
+        border-radius: 40% 60% 60% 40% / 50% 50% 60% 50%;
+    }
+    33% {
+        transform: scale(1.04) translate(4vw, -3vh) rotate(1.5deg);
+        border-radius: 60% 40% 40% 60% / 60% 40% 50% 50%;
+    }
+    66% {
+        transform: scale(0.96) translate(-3vw, 4vh) rotate(-1deg);
+        border-radius: 50% 50% 60% 40% / 40% 60% 40% 60%;
+    }
+    100% {
+        transform: scale(1) translate(2vw, -1vh) rotate(0deg);
+        border-radius: 40% 60% 60% 40% / 50% 50% 60% 50%;
+    }
+}
+
+/* Base Color Palettes */
+.c-blue { background: linear-gradient(135deg, #1A2E82, #1E6FBE); }
+.c-cyan { background: linear-gradient(135deg, #00C2D4, #1E6FBE); }
+.c-emerald { background: linear-gradient(135deg, #56C277, #00C2D4); }
+.c-purple { background: linear-gradient(135deg, #927ACC, #00C2D4); }
+
+/* Spatial Placements */
+.premium-patch-home-tl {
+    top: -5%; left: -8vw;
+    width: 35vw; height: 35vw;
+    animation-duration: 25s;
+}
+
+.premium-patch-home-br {
+    bottom: -5%; right: -5vw;
+    width: 38vw; height: 38vw;
+    animation-delay: -8s;
+}
+
+.premium-patch-about-tl {
+    top: -5%; left: -5vw;
+    width: 32vw; height: 32vw;
+    animation-delay: -2s;
+}
+
+.premium-patch-about-b {
+    bottom: -5%; right: 15%;
+    width: 38vw; height: 28vw;
+    animation-duration: 20s;
+}
+
+.premium-patch-courses-tl {
+    top: 5%; left: -8vw;
+    width: 34vw; height: 34vw;
+    animation-delay: -5s;
+}
+
+.premium-patch-courses-br {
+    bottom: 5%; right: -5vw;
+    width: 38vw; height: 38vw;
+    animation-delay: -9s;
+}
+
+.premium-patch-faculty-tl {
+    top: 15%; left: -10vw;
+    width: 36vw; height: 36vw;
+    animation-duration: 22s;
+}
+
+.premium-patch-faculty-br {
+    bottom: 0%; right: -5vw;
+    width: 30vw; height: 30vw;
+    animation-delay: -3s;
+}
+
+/* Reviews section: clip patches to rectangular bounds */
+#reviews {
+    overflow: hidden;
+    position: relative;
+}
+
+/* REVIEWS PATCHES: Rectangular & structured, NOT cloud-like */
+.premium-patch-reviews-l {
+    top: 10%; left: -2vw;
+    width: 30vw; height: 50%;
+    border-radius: 12px; /* Rectangular, not organic */
+    animation: none; /* No cloud drift — static structured glow */
+    filter: blur(90px);
+}
+
+.premium-patch-reviews-r {
+    bottom: 10%; right: -2vw;
+    width: 25vw; height: 45%;
+    border-radius: 12px; /* Rectangular, not organic */
+    animation: none; /* No cloud drift — static structured glow */
+    filter: blur(90px);
+}
+
+.premium-patch-extra-1 {
+    top: -5%; left: 15%;
+    width: 34vw; height: 34vw;
+}
+
+.premium-patch-extra-2 {
+    bottom: -5%; right: 10%;
+    width: 38vw; height: 38vw;
+    animation-delay: -12s;
+}
+
+
+/* -------------------------------------
+   Review Cards — Refined Hover
+   Subtle dark blue outline only,
+   delayed smooth fade-in transition
+-------------------------------------- */
+.review-card {
+    /* Normal state: clean, no extra glow */
+    border: 1.5px solid transparent;
+    transition: border-color 0.5s ease 0.15s, transform 0.5s ease 0.1s, box-shadow 0.5s ease 0.15s;
+    position: relative;
+    z-index: auto;
+}
+
+.review-card:hover {
+    /* Subtle dark blue outline only — no glow, no fill, no heavy shadow */
+    border-color: rgba(26, 46, 130, 0.35);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(13, 27, 62, 0.08);
+}
+
+
+/* -------------------------------------
+   Mobile / Performance Optimization
+-------------------------------------- */
+@media (max-width: 768px) {
+    #cursor-blob { display: none !important; }
+
+    .premium-patch {
+        filter: blur(25px);
+        opacity: 0.10 !important;
+        animation: none !important;
+        transform: none !important;
+    }
+
+    .edu-pattern, .micro-particles, .light-streaks {
+        display: none !important;
+    }
+
+    .review-card:hover {
+        transform: none;
+        border-color: rgba(26, 46, 130, 0.25);
+        box-shadow: none;
+    }
+}
