@@ -4,8 +4,8 @@
  * Seeds all existing website content on first load if Firestore is empty
  */
 
-import { db, storage } from './firebase-config.js';
-import { ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js";
+import { db } from './firebase-config.js';
+import { ENV } from './env.js';
 import { 
     collection, 
     getDocs, 
@@ -237,24 +237,30 @@ import {
             await setDoc(docRef, docData, opts);
         },
 
-        /** uploadImage — Real Firebase Storage Upload (Works on Spark/Free & Blaze) */
+        /** uploadImage — Cloudinary REST Upload (Free Storage) */
         uploadImage: async function(file) {
             if (!file) throw new Error('No file provided');
             try {
-                // Create a unique filename with timestamp (handle Blob objects which don't have .name)
-                const safeName = (file.name || 'upload.jpg').replace(/[^a-zA-Z0-9.]/g, '_');
-                const filename = `${Date.now()}_${safeName}`;
-                const storageRef = ref(storage, `uploads/${filename}`);
-                
-                // Upload the file
-                const snapshot = await uploadBytes(storageRef, file);
-                
-                // Get the public download URL
-                const downloadURL = await getDownloadURL(snapshot.ref);
-                return downloadURL;
+                const formData = new FormData();
+                formData.append('file', file);
+                formData.append('upload_preset', ENV.CLOUDINARY_UPLOAD_PRESET);
+
+                const response = await fetch(`https://api.cloudinary.com/v1_1/${ENV.CLOUDINARY_CLOUD_NAME}/image/upload`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error ? errorData.error.message : 'Cloudinary upload failed');
+                }
+
+                const data = await response.json();
+                console.log('[CMS] Cloudinary upload successful:', data.secure_url);
+                return data.secure_url;
             } catch (err) {
                 console.error('[CMS] Storage upload failed:', err);
-                // Fallback for extreme cases (not recommended for production gallery)
+                // Fallback to DataURL for immediate UI feedback (not recommended for persistent storage)
                 return new Promise(function(resolve, reject) {
                     var reader = new FileReader();
                     reader.onload = function(e) { resolve(e.target.result); };
@@ -268,12 +274,13 @@ import {
         count: async function(collName) {
             const snap = await getDocs(collection(db, collName));
             return snap.size;
-        }
+        },
+
+        /** seedIfNeeded - manually trigger initialization (useful for Admin login) */
+        seedIfNeeded: seedIfNeeded
     };
 
-    // Auto-seed on first load
-    seedIfNeeded().then(() => {
-        console.log('%c[CMS] Live Firestore Sync Active', 'color:#1565C0;font-weight:bold');
-    });
+    // Initialization check (optional/safe read only)
+    console.log('%c[CMS] Live Firestore Sync Active', 'color:#1565C0;font-weight:bold');
 
 })();

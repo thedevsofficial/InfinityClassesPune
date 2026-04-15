@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>
@@ -21,21 +24,21 @@
             --sidebar-bg: #FFFFFF;
             --sidebar-active: #F1F5F9;
             --card-bg: #FFFFFF;
-            
+
             /* Infinity Primary Accent */
             --accent: #1E6FBE;
             --accent-light: #00C2D4;
             --accent-hover: #1A2E82;
             --accent-bg: rgba(30, 111, 190, 0.08);
-            
+
             /* Premium Typography / Slate Colors */
             --text-primary: #0F172A;
             --text-secondary: #475569;
             --text-muted: #94A3B8;
-            
+
             /* Clean UI Borders */
             --border: #E2E8F0;
-            
+
             /* Status / Action Colors */
             --danger: #EF4444;
             --danger-bg: #FEF2F2;
@@ -43,18 +46,22 @@
             --success-bg: #ECFDF5;
             --warning: #F59E0B;
             --warning-bg: #FFFBEB;
-            
+
             /* Ultra-Soft Layered Shadows */
             --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.03);
             --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.06);
             --shadow-lg: 0 20px 40px -10px rgba(15, 23, 42, 0.08);
-            
+
             /* Sophisticated Geometry */
             --radius: 16px;
             --radius-sm: 10px;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -66,90 +73,202 @@
 
         /* ═══ LOGIN SCREEN ═══ */
         #admin-login-screen {
-            position: fixed; inset: 0;
+            position: fixed;
+            inset: 0;
             background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 50%, #E3F2FD 100%);
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             z-index: 10000;
         }
+
         .login-card {
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 20px;
             padding: 48px 40px;
-            width: 100%; max-width: 420px;
+            width: 100%;
+            max-width: 420px;
             text-align: center;
             box-shadow: var(--shadow-lg);
         }
-        .login-card img { height: 64px; margin-bottom: 24px; }
-        .login-card h2 { font-family: 'Poppins', sans-serif; margin-bottom: 6px; font-size: 1.5rem; color: var(--text-primary); }
-        .login-card > p { color: var(--text-secondary); margin-bottom: 28px; font-size: 0.9rem; }
+
+        .login-card img {
+            height: 64px;
+            margin-bottom: 24px;
+        }
+
+        .login-card h2 {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 6px;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .login-card>p {
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            font-size: 0.9rem;
+        }
+
         .login-card input {
-            width: 100%; background: var(--bg); border: 1px solid var(--border);
-            border-radius: var(--radius-sm); padding: 14px 16px; color: var(--text-primary);
-            font-size: 0.95rem; margin-bottom: 14px; font-family: 'Inter', sans-serif;
+            width: 100%;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 14px 16px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            margin-bottom: 14px;
+            font-family: 'Inter', sans-serif;
             transition: border-color 0.2s;
         }
-        .login-card input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(21,101,192,0.1); }
+
+        .login-card input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.1);
+        }
+
         .login-card button {
-            width: 100%; background: var(--accent); color: white; border: none;
-            border-radius: var(--radius-sm); padding: 14px; font-weight: 700;
-            font-size: 1rem; cursor: pointer; transition: background 0.2s, transform 0.1s;
+            width: 100%;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: var(--radius-sm);
+            padding: 14px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
             margin-top: 8px;
         }
-        .login-card button:hover { background: var(--accent-hover); }
-        .login-card button:active { transform: scale(0.98); }
-        
-        .google-btn {
-            display: flex; align-items: center; justify-content: center; gap: 12px;
-            background: #ffffff !important; color: #3c4043 !important;
-            border: 1px solid #dadce0 !important; padding: 10px 16px !important;
-            font-weight: 500 !important; font-size: 0.95rem !important;
-            box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3);
+
+        .login-card button:hover {
+            background: var(--accent-hover);
         }
-        .google-btn:hover { background: #f8f9fa !important; border-color: #d2e3fc !important; box-shadow: 0 1px 3px 1px rgba(60,64,67,0.15) !important; }
-        .google-btn img { height: 20px !important; margin-bottom: 0 !important; }
+
+        .login-card button:active {
+            transform: scale(0.98);
+        }
+
+        .google-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: #ffffff !important;
+            color: #3c4043 !important;
+            border: 1px solid #dadce0 !important;
+            padding: 10px 16px !important;
+            font-weight: 500 !important;
+            font-size: 0.95rem !important;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3);
+        }
+
+        .google-btn:hover {
+            background: #f8f9fa !important;
+            border-color: #d2e3fc !important;
+            box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.15) !important;
+        }
+
+        .google-btn img {
+            height: 20px !important;
+            margin-bottom: 0 !important;
+        }
 
         #login-error {
-            color: var(--danger); margin-top: 12px; font-size: 0.85rem;
-            background: var(--danger-bg); padding: 8px 12px; border-radius: 6px;
+            color: var(--danger);
+            margin-top: 12px;
+            font-size: 0.85rem;
+            background: var(--danger-bg);
+            padding: 8px 12px;
+            border-radius: 6px;
         }
 
         /* ═══ SIDEBAR ═══ */
         .admin-sidebar {
-            width: 264px; min-height: 100vh; background: var(--sidebar-bg);
-            display: flex; flex-direction: column; padding: 0;
-            position: fixed; left: 0; top: 0; bottom: 0;
-            border-right: 1px solid var(--border); z-index: 100;
-            box-shadow: 2px 0 8px rgba(0,0,0,0.04);
+            width: 264px;
+            min-height: 100vh;
+            background: var(--sidebar-bg);
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            border-right: 1px solid var(--border);
+            z-index: 100;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
         }
+
         .sidebar-logo {
-            display: flex; align-items: center; gap: 12px;
-            padding: 24px 24px 20px; border-bottom: 1px solid rgba(0,0,0,0.06);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 24px 24px 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
         }
-        .sidebar-logo img { height: 40px; }
+
+        .sidebar-logo img {
+            height: 40px;
+        }
+
         .sidebar-logo span {
-            font-family: 'Poppins', sans-serif; font-weight: 700;
-            font-size: 0.95rem; color: var(--text-primary);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text-primary);
         }
-        .sidebar-nav { flex: 1; overflow-y: auto; padding: 12px 12px; }
+
+        .sidebar-nav {
+            flex: 1;
+            overflow-y: auto;
+            padding: 12px 12px;
+        }
+
         .nav-item {
-            display: flex; align-items: center; gap: 12px;
-            padding: 11px 16px; color: var(--text-secondary); text-decoration: none;
-            font-size: 0.88rem; font-weight: 500; transition: all 0.2s;
-            border-radius: var(--radius-sm); cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 11px 16px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
             margin-bottom: 2px;
         }
+
         .nav-item:hover {
-            color: var(--accent); background: rgba(21,101,192,0.06);
+            color: var(--accent);
+            background: rgba(21, 101, 192, 0.06);
         }
+
         .nav-item.active {
-            color: var(--accent); background: var(--sidebar-active);
-            font-weight: 600; box-shadow: inset 3px 0 0 var(--accent);
+            color: var(--accent);
+            background: var(--sidebar-active);
+            font-weight: 600;
+            box-shadow: inset 3px 0 0 var(--accent);
         }
-        .nav-item i { width: 20px; text-align: center; font-size: 0.95rem; }
+
+        .nav-item i {
+            width: 20px;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
         .nav-item .badge {
-            margin-left: auto; background: var(--danger); color: white;
-            border-radius: 10px; padding: 2px 8px; font-size: 0.7rem; font-weight: 700;
+            margin-left: auto;
+            background: var(--danger);
+            color: white;
+            border-radius: 10px;
+            padding: 2px 8px;
+            font-size: 0.7rem;
+            font-weight: 700;
         }
 
         .admin-amber-btn {
@@ -166,6 +285,7 @@
             gap: 6px;
             transition: background 0.2s, color 0.2s;
         }
+
         .admin-amber-btn:hover {
             background: #F5A623;
             color: #0F1117;
@@ -186,7 +306,10 @@
             gap: 6px;
             transition: opacity 0.2s;
         }
-        .admin-upload-btn:hover { opacity: 0.9; }
+
+        .admin-upload-btn:hover {
+            opacity: 0.9;
+        }
 
         .admin-danger-btn {
             background: #ff4a4a;
@@ -203,7 +326,10 @@
             gap: 6px;
             transition: opacity 0.2s;
         }
-        .admin-danger-btn:hover { opacity: 0.9; }
+
+        .admin-danger-btn:hover {
+            opacity: 0.9;
+        }
 
         .admin-gallery-actions {
             display: grid;
@@ -211,318 +337,725 @@
             gap: 8px;
             margin-top: 12px;
         }
+
         .admin-gallery-actions .admin-danger-btn {
             grid-column: span 2;
         }
 
         .sidebar-divider {
-            height: 1px; background: rgba(0,0,0,0.06); margin: 8px 16px;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.06);
+            margin: 8px 16px;
         }
+
         .nav-section-label {
-            font-size: 0.7rem; font-weight: 700; color: var(--text-muted);
-            text-transform: uppercase; letter-spacing: 1px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
             padding: 12px 16px 6px;
         }
+
         .logout-btn {
-            display: flex; align-items: center; gap: 12px;
-            padding: 14px 24px; color: var(--text-secondary); background: none;
-            border: none; border-top: 1px solid rgba(0,0,0,0.06);
-            font-size: 0.88rem; cursor: pointer; font-family: 'Inter', sans-serif;
-            font-weight: 500; transition: color 0.2s; width: 100%; text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 24px;
+            color: var(--text-secondary);
+            background: none;
+            border: none;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+            font-size: 0.88rem;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            transition: color 0.2s;
+            width: 100%;
+            text-align: left;
         }
-        .logout-btn:hover { color: var(--danger); }
+
+        .logout-btn:hover {
+            color: var(--danger);
+        }
 
         /* ═══ MAIN AREA ═══ */
         .admin-main {
-            margin-left: 264px; 
+            margin-left: 264px;
             width: calc(100% - 264px);
             padding: 40px clamp(24px, 4vw, 50px);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Centers the panels */
+            align-items: center;
+            /* Centers the panels */
         }
-        #admin-dashboard { display: none; }
+
+        #admin-dashboard {
+            display: none;
+        }
 
         /* ═══ PANELS ═══ */
         .admin-panel {
-            display: none; 
+            display: none;
             animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             width: 100%;
-            max-width: 1100px; /* Restricts width on ultra-wides for a premium look */
+            max-width: 1100px;
+            /* Restricts width on ultra-wides for a premium look */
             margin: 0 auto;
         }
-        .admin-panel.active-panel { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+        .admin-panel.active-panel {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
         .panel-header {
-            display: flex; align-items: center; justify-content: space-between;
-            margin-bottom: 24px; flex-wrap: wrap; gap: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 12px;
         }
+
         .panel-header h2 {
-            font-family: 'Poppins', sans-serif; font-size: 1.35rem; margin: 0;
-            color: var(--text-primary); display: flex; align-items: center; gap: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.35rem;
+            margin: 0;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        .panel-header h2 i { color: var(--accent); font-size: 1.1rem; }
-        .panel-header-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+        .panel-header h2 i {
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        .panel-header-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
         .panel-subtitle {
-            color: var(--text-secondary); font-size: 0.85rem; margin-top: -16px; margin-bottom: 24px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: -16px;
+            margin-bottom: 24px;
         }
 
         /* ═══ CARD WRAPPER ═══ */
         .panel-card {
-            background: var(--card-bg); border: 1px solid var(--border);
-            border-radius: var(--radius); padding: clamp(20px, 3vw, 32px);
-            box-shadow: var(--shadow-sm); margin-bottom: 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: clamp(20px, 3vw, 32px);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 20px;
         }
 
         /* ═══ FORM ELEMENTS ═══ */
-        .admin-input, .admin-textarea, .admin-select {
-            width: 100%; background: var(--bg); border: 1px solid var(--border);
-            border-radius: var(--radius-sm); padding: 12px 16px; color: var(--text-primary);
-            font-size: 0.9rem; font-family: 'Inter', sans-serif; margin-bottom: 16px;
+        .admin-input,
+        .admin-textarea,
+        .admin-select {
+            width: 100%;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 12px 16px;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 16px;
             transition: border-color 0.2s, box-shadow 0.2s;
         }
-        .admin-input:focus, .admin-textarea:focus, .admin-select:focus {
-            outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(21,101,192,0.1);
+
+        .admin-input:focus,
+        .admin-textarea:focus,
+        .admin-select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.1);
         }
-        .admin-textarea { min-height: 100px; resize: vertical; }
-        .admin-select { cursor: pointer; }
+
+        .admin-textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .admin-select {
+            cursor: pointer;
+        }
+
         .admin-label {
-            display: block; color: var(--text-secondary); font-size: 0.78rem;
-            font-weight: 600; margin-bottom: 6px; text-transform: uppercase;
+            display: block;
+            color: var(--text-secondary);
+            font-size: 0.78rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        .form-row-admin { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-        .form-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+        .form-row-admin {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-row-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+        }
 
         /* ═══ BUTTONS ═══ */
         .admin-save-btn {
-            background: linear-gradient(135deg, var(--accent), var(--accent-light)); 
-            color: white; border: none;
-            border-radius: var(--radius-sm); padding: 12px 28px;
-            font-weight: 600; font-size: 0.9rem; cursor: pointer;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: white;
+            border: none;
+            border-radius: var(--radius-sm);
+            padding: 12px 28px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            display: inline-flex; align-items: center; gap: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             box-shadow: 0 4px 14px rgba(0, 194, 212, 0.2);
         }
-        .admin-save-btn:hover { 
+
+        .admin-save-btn:hover {
             box-shadow: 0 6px 20px rgba(0, 194, 212, 0.35);
-            transform: translateY(-2px); 
+            transform: translateY(-2px);
         }
-        .admin-save-btn:active { transform: scale(0.98); }
-        .admin-save-btn:disabled { opacity: 0.5; cursor: not-allowed; box-shadow: none; }
+
+        .admin-save-btn:active {
+            transform: scale(0.98);
+        }
+
+        .admin-save-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
 
         .admin-add-btn {
-            background: linear-gradient(135deg, var(--accent), var(--accent-light)); 
-            color: white; border: none;
-            border-radius: var(--radius-sm); padding: 10px 20px; font-weight: 600;
-            font-size: 0.85rem; cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            display: inline-flex; align-items: center; gap: 6px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: white;
+            border: none;
+            border-radius: var(--radius-sm);
+            padding: 10px 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
             box-shadow: 0 4px 12px rgba(30, 111, 190, 0.2);
         }
-        .admin-add-btn:hover { 
+
+        .admin-add-btn:hover {
             transform: translateY(-1px);
-            box-shadow: 0 6px 16px rgba(30, 111, 190, 0.35); 
+            box-shadow: 0 6px 16px rgba(30, 111, 190, 0.35);
         }
 
         .admin-delete-btn {
-            background: var(--danger-bg); border: 1px solid transparent; color: var(--danger);
-            border-radius: 6px; padding: 7px 14px; font-size: 0.8rem;
-            cursor: pointer; transition: all 0.2s; font-weight: 500;
+            background: var(--danger-bg);
+            border: 1px solid transparent;
+            color: var(--danger);
+            border-radius: 6px;
+            padding: 7px 14px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
         }
-        .admin-delete-btn:hover { background: var(--danger); color: white; }
+
+        .admin-delete-btn:hover {
+            background: var(--danger);
+            color: white;
+        }
 
         .admin-edit-btn {
-            background: var(--accent-bg); border: 1px solid transparent; color: var(--accent);
-            border-radius: 6px; padding: 7px 14px; font-size: 0.8rem;
-            cursor: pointer; transition: all 0.2s; font-weight: 500;
+            background: var(--accent-bg);
+            border: 1px solid transparent;
+            color: var(--accent);
+            border-radius: 6px;
+            padding: 7px 14px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
         }
-        .admin-edit-btn:hover { background: var(--accent); color: white; }
+
+        .admin-edit-btn:hover {
+            background: var(--accent);
+            color: white;
+        }
 
         .admin-mark-btn {
-            background: var(--success-bg); border: 1px solid transparent; color: var(--success);
-            border-radius: 6px; padding: 7px 14px; font-size: 0.8rem;
-            cursor: pointer; transition: all 0.2s; font-weight: 500;
+            background: var(--success-bg);
+            border: 1px solid transparent;
+            color: var(--success);
+            border-radius: 6px;
+            padding: 7px 14px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
         }
-        .admin-mark-btn:hover { background: var(--success); color: white; }
+
+        .admin-mark-btn:hover {
+            background: var(--success);
+            color: white;
+        }
 
         .btn-outline {
-            background: transparent; border: 1px solid var(--border); color: var(--text-secondary);
-            border-radius: 6px; padding: 7px 14px; font-size: 0.8rem;
-            cursor: pointer; transition: all 0.2s; font-weight: 500;
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            border-radius: 6px;
+            padding: 7px 14px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
         }
-        .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+        .btn-outline:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
 
         /* ═══ SEARCH BAR ═══ */
         .admin-search-bar {
-            position: relative; margin-bottom: 20px;
+            position: relative;
+            margin-bottom: 20px;
         }
+
         .admin-search-bar input {
-            width: 100%; background: var(--card-bg); border: 1px solid var(--border);
-            border-radius: var(--radius-sm); padding: 12px 16px 12px 42px;
-            font-size: 0.9rem; color: var(--text-primary);
-            font-family: 'Inter', sans-serif; transition: border-color 0.2s;
+            width: 100%;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 12px 16px 12px 42px;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.2s;
         }
-        .admin-search-bar input:focus { outline: none; border-color: var(--accent); }
+
+        .admin-search-bar input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
         .admin-search-bar i {
-            position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
-            color: var(--text-muted); font-size: 0.9rem;
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
 
         /* ═══ TABLE ═══ */
         .admin-table {
-            width: 100%; border-collapse: separate; border-spacing: 0;
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
             font-size: 0.85rem;
         }
+
         .admin-table th {
-            text-align: left; padding: 12px 14px; color: var(--text-muted);
-            border-bottom: 2px solid var(--border); font-weight: 600;
-            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px;
+            text-align: left;
+            padding: 12px 14px;
+            color: var(--text-muted);
+            border-bottom: 2px solid var(--border);
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             background: var(--bg);
         }
+
         .admin-table td {
-            padding: 12px 14px; border-bottom: 1px solid var(--border);
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border);
             vertical-align: middle;
         }
-        .admin-table tr:hover td { background: rgba(21,101,192,0.02); }
-        .unread-row td { background: var(--accent-bg) !important; }
+
+        .admin-table tr:hover td {
+            background: rgba(21, 101, 192, 0.02);
+        }
+
+        .unread-row td {
+            background: var(--accent-bg) !important;
+        }
+
         .badge-new {
-            background: var(--accent); color: white; border-radius: 10px;
-            padding: 3px 10px; font-size: 0.7rem; font-weight: 700;
+            background: var(--accent);
+            color: white;
+            border-radius: 10px;
+            padding: 3px 10px;
+            font-size: 0.7rem;
+            font-weight: 700;
         }
+
         .badge-read {
-            background: var(--bg); color: var(--text-muted);
-            border-radius: 10px; padding: 3px 10px; font-size: 0.7rem; border: 1px solid var(--border);
+            background: var(--bg);
+            color: var(--text-muted);
+            border-radius: 10px;
+            padding: 3px 10px;
+            font-size: 0.7rem;
+            border: 1px solid var(--border);
         }
-        .table-actions { display: flex; gap: 6px; align-items: center; }
-        .table-wrap { overflow-x: auto; }
+
+        .table-actions {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+        }
 
         /* ═══ CRUD LIST ITEMS ═══ */
         .crud-item {
-            background: var(--card-bg); border: 1px solid var(--border);
-            border-radius: var(--radius); padding: 20px 24px; margin-bottom: 12px;
-            display: flex; align-items: center; justify-content: space-between;
-            gap: 16px; flex-wrap: wrap; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .crud-item:hover { 
-            box-shadow: 0 8px 24px rgba(21,101,192,0.06); 
-            transform: translateY(-2px); 
-            border-color: rgba(21,101,192,0.15);
+
+        .crud-item:hover {
+            box-shadow: 0 8px 24px rgba(21, 101, 192, 0.06);
+            transform: translateY(-2px);
+            border-color: rgba(21, 101, 192, 0.15);
         }
-        .crud-item-info { flex: 1; min-width: 200px; }
-        .crud-item-info h4 { margin-bottom: 6px; font-size: 1rem; color: var(--text-primary); font-weight: 600; }
-        .crud-item-info p { color: var(--text-secondary); font-size: 0.85rem; margin: 0; }
-        .crud-item-actions { display: flex; gap: 8px; flex-shrink: 0; }
+
+        .crud-item-info {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .crud-item-info h4 {
+            margin-bottom: 6px;
+            font-size: 1rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .crud-item-info p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        .crud-item-actions {
+            display: flex;
+            gap: 8px;
+            flex-shrink: 0;
+        }
 
         .crud-form {
-            background: var(--bg); border: 2px solid var(--accent);
-            border-radius: var(--radius); padding: 24px; margin-bottom: 20px;
+            background: var(--bg);
+            border: 2px solid var(--accent);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 20px;
         }
-        .crud-form h3 { margin-bottom: 16px; font-size: 1rem; color: var(--accent); font-weight: 700; }
+
+        .crud-form h3 {
+            margin-bottom: 16px;
+            font-size: 1rem;
+            color: var(--accent);
+            font-weight: 700;
+        }
 
         /* ═══ STATUS BADGE ═══ */
         .status-active {
-            display: inline-flex; align-items: center; gap: 4px;
-            background: var(--success-bg); color: var(--success);
-            padding: 3px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: var(--success-bg);
+            color: var(--success);
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 0.72rem;
+            font-weight: 600;
         }
+
         .status-inactive {
-            display: inline-flex; align-items: center; gap: 4px;
-            background: var(--danger-bg); color: var(--danger);
-            padding: 3px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: var(--danger-bg);
+            color: var(--danger);
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 0.72rem;
+            font-weight: 600;
         }
 
         /* ═══ TOGGLE SWITCH ═══ */
-        .toggle-switch { position: relative; width: 44px; height: 24px; flex-shrink: 0; }
-        .toggle-switch input { opacity: 0; width: 0; height: 0; }
+        .toggle-switch {
+            position: relative;
+            width: 44px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
         .toggle-slider {
-            position: absolute; inset: 0; background: #CFD8DC;
-            border-radius: 24px; cursor: pointer; transition: background 0.3s;
+            position: absolute;
+            inset: 0;
+            background: #CFD8DC;
+            border-radius: 24px;
+            cursor: pointer;
+            transition: background 0.3s;
         }
+
         .toggle-slider::before {
-            content: ''; position: absolute; height: 18px; width: 18px;
-            left: 3px; bottom: 3px; background: white; border-radius: 50%;
-            transition: transform 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+            content: '';
+            position: absolute;
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
         }
-        .toggle-switch input:checked + .toggle-slider { background: var(--accent); }
-        .toggle-switch input:checked + .toggle-slider::before { transform: translateX(20px); }
+
+        .toggle-switch input:checked+.toggle-slider {
+            background: var(--accent);
+        }
+
+        .toggle-switch input:checked+.toggle-slider::before {
+            transform: translateX(20px);
+        }
 
         /* ═══ STAR SELECTOR ═══ */
-        .star-selector { display: flex; gap: 4px; margin-bottom: 16px; }
-        .star-selector span {
-            font-size: 1.5rem; cursor: pointer; color: #CFD8DC; transition: color 0.15s;
+        .star-selector {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 16px;
         }
-        .star-selector span.active { color: #FFC107; }
-        .star-selector span:hover { color: #FFC107; }
+
+        .star-selector span {
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #CFD8DC;
+            transition: color 0.15s;
+        }
+
+        .star-selector span.active {
+            color: #FFC107;
+        }
+
+        .star-selector span:hover {
+            color: #FFC107;
+        }
 
         /* ═══ TAG LIST ═══ */
-        .tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
-        .tag-item {
-            background: var(--accent-bg); color: var(--accent);
-            border-radius: 6px; padding: 6px 12px; font-size: 0.8rem; font-weight: 500;
-            display: flex; align-items: center; gap: 8px;
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
         }
-        .tag-item .tag-remove { cursor: pointer; color: var(--danger); font-size: 0.9rem; }
-        .tag-input-row { display: flex; gap: 8px; margin-bottom: 16px; }
-        .tag-input-row input { flex: 1; }
-        .tag-input-row button { flex-shrink: 0; }
+
+        .tag-item {
+            background: var(--accent-bg);
+            color: var(--accent);
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tag-item .tag-remove {
+            cursor: pointer;
+            color: var(--danger);
+            font-size: 0.9rem;
+        }
+
+        .tag-input-row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .tag-input-row input {
+            flex: 1;
+        }
+
+        .tag-input-row button {
+            flex-shrink: 0;
+        }
 
         /* ═══ GALLERY GRID ═══ */
         .admin-gallery-grid {
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px; margin-top: 16px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 16px;
         }
+
         .admin-gallery-tile {
-            background: var(--card-bg); border: 1px solid var(--border);
-            border-radius: var(--radius); padding: 1.5rem;
-            display: flex; flex-direction: column; gap: 1rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
+
         .admin-gallery-header {
-            display: flex; justify-content: space-between; align-items: center;
-            border-bottom: 1px solid var(--border); padding-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
         }
+
         .admin-gallery-images-grid {
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-            gap: 10px; margin-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
         }
+
         .admin-gallery-img-wrapper {
-            position: relative; aspect-ratio: 1/1; border-radius: 6px; overflow: hidden;
+            position: relative;
+            aspect-ratio: 1/1;
+            border-radius: 6px;
+            overflow: hidden;
             border: 1px solid var(--border);
         }
-        .admin-gallery-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+
+        .admin-gallery-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .admin-gallery-img-del {
-            position: absolute; top: 2px; right: 2px;
-            background: rgba(239,68,68,0.9); color: white; border: none;
-            width: 20px; height: 20px; border-radius: 4px; cursor: pointer;
-            font-size: 0.7rem; display: flex; align-items: center; justify-content: center;
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            background: rgba(239, 68, 68, 0.9);
+            color: white;
+            border: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .admin-gallery-img-del:hover { background: #dc2626; }
+
+        .admin-gallery-img-del:hover {
+            background: #dc2626;
+        }
+
         .admin-add-img-slot {
-            aspect-ratio: 1/1; border: 2px dashed var(--border); border-radius: 6px;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            color: var(--text-muted); cursor: pointer; transition: all 0.2s;
-            font-size: 0.7rem; gap: 4px;
+            aspect-ratio: 1/1;
+            border: 2px dashed var(--border);
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.7rem;
+            gap: 4px;
         }
-        .admin-add-img-slot:hover { border-color: var(--accent); color: var(--accent); background: rgba(21,101,192,0.05); }
+
+        .admin-add-img-slot:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(21, 101, 192, 0.05);
+        }
 
         /* ═══ UPLOAD BUTTON ═══ */
         .upload-btn {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--accent-bg); color: var(--accent); font-weight: 500;
-            border: 1px dashed var(--accent); border-radius: 6px;
-            padding: 8px 16px; font-size: 0.8rem; cursor: pointer; transition: background 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--accent-bg);
+            color: var(--accent);
+            font-weight: 500;
+            border: 1px dashed var(--accent);
+            border-radius: 6px;
+            padding: 8px 16px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: background 0.2s;
         }
-        .upload-btn:hover { background: rgba(21,101,192,0.12); }
-        .upload-btn input[type="file"] { display: none; }
+
+        .upload-btn:hover {
+            background: rgba(21, 101, 192, 0.12);
+        }
+
+        .upload-btn input[type="file"] {
+            display: none;
+        }
 
         .photo-preview {
-            width: 80px; height: 80px; border-radius: 50%; object-fit: cover;
-            border: 3px solid var(--accent); margin-bottom: 12px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            margin-bottom: 12px;
         }
 
         /* ═══ DRAG & DROP ═══ */
-        .admin-gallery-img-wrapper { transition: transform 0.2s, opacity 0.2s, border 0.2s; }
+        .admin-gallery-img-wrapper {
+            transition: transform 0.2s, opacity 0.2s, border 0.2s;
+        }
+
         .admin-gallery-img-wrapper.drag-over {
             transform: scale(0.95);
             opacity: 0.8;
@@ -532,99 +1065,239 @@
 
         /* ═══ STAT CARDS ═══ */
         .stats-row {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px; margin-bottom: 24px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
         }
+
         .stat-card {
-            background: var(--card-bg); border: 1px solid var(--border);
-            border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow-sm);
-            display: flex; align-items: center; gap: 16px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: center;
+            gap: 16px;
         }
+
         .stat-card-icon {
-            width: 48px; height: 48px; border-radius: 12px;
-            display: flex; align-items: center; justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.2rem;
         }
-        .stat-card-icon.blue { background: rgba(21,101,192,0.1); color: var(--accent); }
-        .stat-card-icon.green { background: var(--success-bg); color: var(--success); }
-        .stat-card-icon.orange { background: var(--warning-bg); color: var(--warning); }
-        .stat-card-icon.red { background: var(--danger-bg); color: var(--danger); }
-        .stat-card-value { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); }
-        .stat-card-label { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; }
+
+        .stat-card-icon.blue {
+            background: rgba(21, 101, 192, 0.1);
+            color: var(--accent);
+        }
+
+        .stat-card-icon.green {
+            background: var(--success-bg);
+            color: var(--success);
+        }
+
+        .stat-card-icon.orange {
+            background: var(--warning-bg);
+            color: var(--warning);
+        }
+
+        .stat-card-icon.red {
+            background: var(--danger-bg);
+            color: var(--danger);
+        }
+
+        .stat-card-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .stat-card-label {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
 
         /* ═══ TOAST ═══ */
         .admin-toast {
-            position: fixed; bottom: 24px; right: 24px;
-            padding: 14px 24px; border-radius: var(--radius-sm);
-            font-weight: 600; font-size: 0.9rem; z-index: 9999;
-            transform: translateY(80px); opacity: 0;
-            transition: all 0.3s ease; pointer-events: none;
-            box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 8px;
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            padding: 14px 24px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.9rem;
+            z-index: 9999;
+            transform: translateY(80px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        .admin-toast.show { transform: translateY(0); opacity: 1; }
-        .admin-toast.success { background: var(--success); color: white; }
-        .admin-toast.error { background: var(--danger); color: white; }
+
+        .admin-toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .admin-toast.success {
+            background: var(--success);
+            color: white;
+        }
+
+        .admin-toast.error {
+            background: var(--danger);
+            color: white;
+        }
 
         /* ═══ LOADING SPINNER ═══ */
         .admin-loading {
-            display: flex; align-items: center; justify-content: center;
-            padding: 40px; color: var(--text-muted); gap: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            color: var(--text-muted);
+            gap: 12px;
         }
+
         .admin-loading .spinner {
-            width: 24px; height: 24px; border: 3px solid var(--border);
-            border-top-color: var(--accent); border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            border: 3px solid var(--border);
+            border-top-color: var(--accent);
+            border-radius: 50%;
             animation: spin 0.8s linear infinite;
         }
-        @keyframes spin { to { transform: rotate(360deg); } }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
 
         /* ═══ EMPTY STATE ═══ */
         .empty-state {
-            text-align: center; padding: 48px 24px; color: var(--text-muted);
+            text-align: center;
+            padding: 48px 24px;
+            color: var(--text-muted);
         }
-        .empty-state i { font-size: 2.5rem; margin-bottom: 12px; display: block; }
-        .empty-state p { font-size: 0.9rem; }
+
+        .empty-state i {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .empty-state p {
+            font-size: 0.9rem;
+        }
 
         /* ═══ RESPONSIVE ═══ */
         @media (max-width: 768px) {
-            .admin-sidebar { width: 64px; }
-            .admin-sidebar span, .nav-item span:not(.badge),
-            .sidebar-logo span, .logout-btn span,
-            .nav-section-label { display: none; }
-            .admin-main { margin-left: 64px; }
-            .nav-item { padding: 14px 0; justify-content: center; border-radius: 0; }
-            .sidebar-logo { padding: 16px 0; justify-content: center; }
-            .logout-btn { justify-content: center; padding: 14px 0; }
-            .form-row-admin, .form-row-3 { grid-template-columns: 1fr; }
-            .stats-row { grid-template-columns: 1fr 1fr; }
+            .admin-sidebar {
+                width: 64px;
+            }
+
+            .admin-sidebar span,
+            .nav-item span:not(.badge),
+            .sidebar-logo span,
+            .logout-btn span,
+            .nav-section-label {
+                display: none;
+            }
+
+            .admin-main {
+                margin-left: 64px;
+            }
+
+            .nav-item {
+                padding: 14px 0;
+                justify-content: center;
+                border-radius: 0;
+            }
+
+            .sidebar-logo {
+                padding: 16px 0;
+                justify-content: center;
+            }
+
+            .logout-btn {
+                justify-content: center;
+                padding: 14px 0;
+            }
+
+            .form-row-admin,
+            .form-row-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-row {
+                grid-template-columns: 1fr 1fr;
+            }
         }
+
         @media (max-width: 480px) {
-            .panel-header { flex-direction: column; align-items: flex-start; }
-            .stats-row { grid-template-columns: 1fr; }
+            .panel-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .stats-row {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* ═══ IMAGE CROPPING MODAL ═══ */
         .crop-modal {
-            position: fixed; inset: 0;
+            position: fixed;
+            inset: 0;
             background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(8px);
-            display: none; align-items: center; justify-content: center;
-            z-index: 20000; padding: 20px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 20000;
+            padding: 20px;
         }
-        .crop-modal.active { display: flex; }
+
+        .crop-modal.active {
+            display: flex;
+        }
+
         .crop-card {
             background: var(--card-bg);
             border-radius: 24px;
-            width: 100%; max-width: 600px;
+            width: 100%;
+            max-width: 600px;
             overflow: hidden;
             box-shadow: var(--shadow-lg);
-            display: flex; flex-direction: column;
+            display: flex;
+            flex-direction: column;
         }
+
         .crop-header {
             padding: 20px 24px;
             border-bottom: 1px solid var(--border);
-            display: flex; align-items: center; justify-content: space-between;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        .crop-header h3 { font-family: 'Poppins', sans-serif; font-size: 1.1rem; margin: 0; }
+
+        .crop-header h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
         .crop-body {
             padding: 0;
             background: #f1f5f9;
@@ -633,29 +1306,52 @@
             overflow: hidden;
             position: relative;
         }
+
         .crop-body img {
             display: block;
             max-width: 100%;
         }
+
         .crop-footer {
             padding: 20px 24px;
             border-top: 1px solid var(--border);
-            display: flex; gap: 12px; justify-content: flex-end;
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
         }
+
         .crop-btn-save {
-            background: var(--accent); color: white; border: none;
-            padding: 12px 24px; border-radius: var(--radius-sm);
-            font-weight: 700; cursor: pointer; transition: all 0.2s;
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
         }
-        .crop-btn-save:hover { background: var(--accent-hover); }
+
+        .crop-btn-save:hover {
+            background: var(--accent-hover);
+        }
+
         .crop-btn-cancel {
-            background: var(--bg); color: var(--text-secondary); border: 1px solid var(--border);
-            padding: 12px 24px; border-radius: var(--radius-sm);
-            font-weight: 600; cursor: pointer; transition: all 0.2s;
+            background: var(--bg);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            padding: 12px 24px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
         }
-        .crop-btn-cancel:hover { background: var(--sidebar-active); }
+
+        .crop-btn-cancel:hover {
+            background: var(--sidebar-active);
+        }
     </style>
 </head>
+
 <body>
 
     <!-- ═══ LOGIN SCREEN ═══ -->
@@ -664,13 +1360,14 @@
             <img src="logo.png" alt="Infinity Classes Logo">
             <h2>Admin Panel</h2>
             <p style="margin-bottom: 24px;">Please sign in to manage your website</p>
-            
+
             <button id="google-login-btn" class="google-btn">
                 <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
                 Sign in with Google
             </button>
-            
-            <p id="login-error" style="display:none; color: var(--danger); font-size: 0.85rem; margin-top: 16px; font-weight: 500;"></p>
+
+            <p id="login-error"
+                style="display:none; color: var(--danger); font-size: 0.85rem; margin-top: 16px; font-weight: 500;"></p>
         </div>
     </div>
 
@@ -684,7 +1381,7 @@
 
             console.log('[Auth] Firebase auth module loaded successfully');
 
-            const ADMIN_EMAIL = 'infinityclassespune@gmail.com';
+            const ADMIN_EMAIL = 'netlifytype2@gmail.com';
 
             // Auth state listener
             onAuthStateChanged(auth, async (user) => {
@@ -693,6 +1390,11 @@
                     if (user.email === ADMIN_EMAIL) {
                         document.getElementById('admin-login-screen').style.display = 'none';
                         document.getElementById('admin-dashboard').style.display = 'flex';
+                        
+                        // New project? Seed if needed now that we have write permissions
+                        if (window.CMS && window.CMS.seedIfNeeded) {
+                            await window.CMS.seedIfNeeded();
+                        }
                     } else {
                         await signOut(auth);
                         const errEl = document.getElementById('login-error');
@@ -708,7 +1410,7 @@
             // Google login button handler
             const loginBtn = document.getElementById('google-login-btn');
             if (loginBtn) {
-                loginBtn.addEventListener('click', async function() {
+                loginBtn.addEventListener('click', async function () {
                     const errEl = document.getElementById('login-error');
                     const provider = new GoogleAuthProvider();
 
@@ -810,7 +1512,8 @@
                 <div class="panel-header">
                     <h2><i class="fas fa-inbox"></i> Enquiries</h2>
                     <div class="panel-header-actions">
-                        <button class="admin-mark-btn" id="mark-all-read-btn"><i class="fas fa-check-double"></i> Mark All Read</button>
+                        <button class="admin-mark-btn" id="mark-all-read-btn"><i class="fas fa-check-double"></i> Mark
+                            All Read</button>
                     </div>
                 </div>
                 <div id="enquiry-stats-row" class="stats-row"></div>
@@ -823,12 +1526,26 @@
                         <table class="admin-table">
                             <thead>
                                 <tr>
-                                    <th>#</th><th>Student</th><th>Parent</th><th>Class</th>
-                                    <th>Board</th><th>Phone</th><th>Time</th><th>Date</th><th>Status</th><th>Actions</th>
+                                    <th>#</th>
+                                    <th>Student</th>
+                                    <th>Parent</th>
+                                    <th>Class</th>
+                                    <th>Board</th>
+                                    <th>Phone</th>
+                                    <th>Time</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody id="enquiries-table-body">
-                                <tr><td colspan="10"><div class="admin-loading"><div class="spinner"></div> Loading enquiries...</div></td></tr>
+                                <tr>
+                                    <td colspan="10">
+                                        <div class="admin-loading">
+                                            <div class="spinner"></div> Loading enquiries...
+                                        </div>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -847,7 +1564,9 @@
                 </div>
                 <div id="course-form-area"></div>
                 <div id="courses-list">
-                    <div class="admin-loading"><div class="spinner"></div> Loading courses...</div>
+                    <div class="admin-loading">
+                        <div class="spinner"></div> Loading courses...
+                    </div>
                 </div>
             </div>
 
@@ -859,7 +1578,9 @@
                 </div>
                 <div id="faculty-form-area"></div>
                 <div id="faculty-list">
-                    <div class="admin-loading"><div class="spinner"></div> Loading...</div>
+                    <div class="admin-loading">
+                        <div class="spinner"></div> Loading...
+                    </div>
                 </div>
             </div>
 
@@ -871,7 +1592,9 @@
                 </div>
                 <div id="result-form-area"></div>
                 <div id="results-list">
-                    <div class="admin-loading"><div class="spinner"></div> Loading...</div>
+                    <div class="admin-loading">
+                        <div class="spinner"></div> Loading...
+                    </div>
                 </div>
             </div>
 
@@ -892,7 +1615,9 @@
                 </div>
                 <div id="update-form-area"></div>
                 <div id="updates-list">
-                    <div class="admin-loading"><div class="spinner"></div> Loading...</div>
+                    <div class="admin-loading">
+                        <div class="spinner"></div> Loading...
+                    </div>
                 </div>
             </div>
 
@@ -906,11 +1631,16 @@
                     <div class="form-row-admin" style="grid-template-columns: 1fr;">
                         <div class="form-group">
                             <label class="admin-label">Homepage YouTube Video URL</label>
-                            <input type="text" id="settings-youtube-url" class="admin-input" placeholder="e.g. https://www.youtube.com/watch?v=OFq3VckdcyE">
-                            <small style="color:var(--text-muted); font-size: 0.8rem; display:block; margin-top:-10px; margin-bottom: 16px;">Paste the full YouTube URL or youtu.be link. This will replace the 'See Us In Action' section on the homepage. Leave blank to hide the video.</small>
+                            <input type="text" id="settings-youtube-url" class="admin-input"
+                                placeholder="e.g. https://www.youtube.com/watch?v=OFq3VckdcyE">
+                            <small
+                                style="color:var(--text-muted); font-size: 0.8rem; display:block; margin-top:-10px; margin-bottom: 16px;">Paste
+                                the full YouTube URL or youtu.be link. This will replace the 'See Us In Action' section
+                                on the homepage. Leave blank to hide the video.</small>
                         </div>
                     </div>
-                    <button class="admin-save-btn" id="save-settings-btn"><i class="fas fa-save"></i> Save Settings</button>
+                    <button class="admin-save-btn" id="save-settings-btn"><i class="fas fa-save"></i> Save
+                        Settings</button>
                 </div>
             </div>
 
@@ -925,27 +1655,34 @@
                         <div class="form-group">
                             <label class="admin-label">Image (16:9 Aspect Ratio)</label>
                             <div style="display: flex; gap: 1rem; align-items: flex-end;">
-                                <div id="online-image-preview" style="width: 200px; height: 112px; border-radius: 8px; background: var(--bg-tint); border: 2px dashed var(--primary-mid); display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                                <div id="online-image-preview"
+                                    style="width: 200px; height: 112px; border-radius: 8px; background: var(--bg-tint); border: 2px dashed var(--primary-mid); display: flex; align-items: center; justify-content: center; overflow: hidden;">
                                     <i class="fas fa-image" style="color: var(--text-muted); font-size: 2rem;"></i>
                                 </div>
                                 <div style="display:flex; flex-direction:column; gap:0.5rem;">
                                     <input type="file" id="online-image-input" accept="image/*" style="display:none;">
-                                    <button class="admin-edit-btn" id="online-upload-btn" onclick="document.getElementById('online-image-input').click()"><i class="fas fa-upload"></i> Upload</button>
-                                    <button class="admin-delete-btn" id="online-remove-img-btn" style="display:none;"><i class="fas fa-trash"></i> Remove Photo</button>
+                                    <button class="admin-edit-btn" id="online-upload-btn"
+                                        onclick="document.getElementById('online-image-input').click()"><i
+                                            class="fas fa-upload"></i> Upload</button>
+                                    <button class="admin-delete-btn" id="online-remove-img-btn" style="display:none;"><i
+                                            class="fas fa-trash"></i> Remove Photo</button>
                                 </div>
                                 <input type="hidden" id="online-photo-url-hidden">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="admin-label">Information Text (Body)</label>
-                            <textarea id="online-body" class="admin-input" rows="4" placeholder="Enter details about your online courses here..."></textarea>
+                            <textarea id="online-body" class="admin-input" rows="4"
+                                placeholder="Enter details about your online courses here..."></textarea>
                         </div>
                         <div class="form-group">
                             <label class="admin-label">Redirect URL / Link</label>
-                            <input type="text" id="online-url" class="admin-input" placeholder="e.g. https://vokmatch.in/" value="https://vokmatch.in/">
+                            <input type="text" id="online-url" class="admin-input"
+                                placeholder="e.g. https://vokmatch.in/" value="https://vokmatch.in/">
                         </div>
                     </div>
-                    <button class="admin-save-btn" id="save-online-btn"><i class="fas fa-save"></i> Save Settings</button>
+                    <button class="admin-save-btn" id="save-online-btn"><i class="fas fa-save"></i> Save
+                        Settings</button>
                 </div>
             </div>
 
@@ -959,13 +1696,13 @@
     <!-- Cropper.js CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>
-    
+
     <!-- ═══ COMPLETE APP LOGIC (CONNECTED TO CMS) ═══ -->
     <script type="module">
-        import { db as _firestoreDb, storage } from './firebase-config.js';
+        import { db as _firestoreDb } from './firebase-config.js';
 
         // Provide window.CMS as a promise-aware reference
-        const db = window.CMS; 
+        const db = window.CMS;
 
         /* ──────────── IMAGE CROPPING ──────────── */
         let currentCropper = null;
@@ -1027,50 +1764,50 @@
         }
 
         function resizeImageBeforeUpload(file, targetWidth, targetHeight) {
-          return new Promise((resolve) => {
-            const img = new Image();
-            const reader = new FileReader();
+            return new Promise((resolve) => {
+                const img = new Image();
+                const reader = new FileReader();
 
-            reader.onload = (e) => {
-              img.src = e.target.result;
-            };
+                reader.onload = (e) => {
+                    img.src = e.target.result;
+                };
 
-            img.onload = () => {
-              const canvas = document.createElement('canvas');
-              canvas.width = targetWidth;
-              canvas.height = targetHeight;
-              const ctx = canvas.getContext('2d');
+                img.onload = () => {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = targetWidth;
+                    canvas.height = targetHeight;
+                    const ctx = canvas.getContext('2d');
 
-              // Cover crop — fills the canvas, centered, no stretching
-              const srcRatio = img.width / img.height;
-              const tgtRatio = targetWidth / targetHeight;
-              let sx, sy, sw, sh;
+                    // Cover crop — fills the canvas, centered, no stretching
+                    const srcRatio = img.width / img.height;
+                    const tgtRatio = targetWidth / targetHeight;
+                    let sx, sy, sw, sh;
 
-              if (srcRatio > tgtRatio) {
-                // Image is wider than target — crop sides
-                sh = img.height;
-                sw = img.height * tgtRatio;
-                sx = (img.width - sw) / 2;
-                sy = 0;
-              } else {
-                // Image is taller than target — crop top/bottom
-                sw = img.width;
-                sh = img.width / tgtRatio;
-                sx = 0;
-                sy = (img.height - sh) / 2;
-              }
+                    if (srcRatio > tgtRatio) {
+                        // Image is wider than target — crop sides
+                        sh = img.height;
+                        sw = img.height * tgtRatio;
+                        sx = (img.width - sw) / 2;
+                        sy = 0;
+                    } else {
+                        // Image is taller than target — crop top/bottom
+                        sw = img.width;
+                        sh = img.width / tgtRatio;
+                        sx = 0;
+                        sy = (img.height - sh) / 2;
+                    }
 
-              ctx.drawImage(img, sx, sy, sw, sh, 0, 0, targetWidth, targetHeight);
+                    ctx.drawImage(img, sx, sy, sw, sh, 0, 0, targetWidth, targetHeight);
 
-              canvas.toBlob((blob) => {
-                resolve(blob);
-              }, 'image/jpeg', 0.88);
-            };
+                    canvas.toBlob((blob) => {
+                        resolve(blob);
+                    }, 'image/jpeg', 0.88);
+                };
 
-            reader.readAsDataURL(file);
-          });
+                reader.readAsDataURL(file);
+            });
         }
-        
+
         /* ──────────── TOAST ──────────── */
         function showToast(msg, type = 'success') {
             const t = document.getElementById('admin-toast');
@@ -1088,7 +1825,7 @@
             div.style.marginTop = '10px';
             div.innerHTML = `<button id="global-publish-btn" style="width:100%; background: linear-gradient(135deg, var(--success), #34D399); color:white; border:none; padding:12px; border-radius:10px; font-weight:600; cursor:pointer; font-size:0.95rem; display:flex; justify-content:center; align-items:center; gap:8px; box-shadow: 0 4px 14px rgba(16, 185, 129, 0.25); transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 6px 20px rgba(16, 185, 129, 0.4)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='0 4px 14px rgba(16, 185, 129, 0.25)'; this.style.transform='translateY(0)'"><i class="fas fa-globe"></i> Publish Changes</button>`;
             sidebar.insertBefore(div, sidebar.firstChild);
-            
+
             document.getElementById('global-publish-btn').addEventListener('click', () => {
                 showToast('🚀 ALL CHANGES PUBLISHED LIVE TO WEBSITE!', 'success');
             });
@@ -1141,7 +1878,7 @@
             const snap = await window.CMS.get('site_settings', 'online_course_config');
             let d = { photoUrl: '', bodyText: '', targetUrl: 'https://vokmatch.in/' };
             if (snap.exists()) d = { ...d, ...snap.data() };
-            
+
             document.getElementById('online-photo-url-hidden').value = d.photoUrl || '';
             document.getElementById('online-body').value = d.bodyText || '';
             document.getElementById('online-url').value = d.targetUrl || 'https://vokmatch.in/';
@@ -1164,14 +1901,14 @@
                     const file = e.target.files[0];
                     if (!file) return;
                     input.value = '';
-                    const croppedBlob = await cropImage(file, 16/9, 1200, 675);
+                    const croppedBlob = await cropImage(file, 16 / 9, 1200, 675);
                     if (croppedBlob) {
                         try {
                             const url = await window.CMS.uploadImage(croppedBlob);
                             document.getElementById('online-photo-url-hidden').value = url;
                             document.getElementById('online-image-preview').innerHTML = `<img src="${url}" style="width:100%;height:100%;object-fit:cover;">`;
                             document.getElementById('online-remove-img-btn').style.display = 'inline-flex';
-                        } catch(err) {
+                        } catch (err) {
                             showToast('Failed to upload image.', 'error');
                         }
                     }
@@ -1193,16 +1930,16 @@
                     const photoUrl = document.getElementById('online-photo-url-hidden').value;
                     const bodyText = document.getElementById('online-body').value.trim();
                     const targetUrl = document.getElementById('online-url').value.trim();
-                    
+
                     const orig = saveBtn.innerHTML;
                     saveBtn.innerHTML = '<div class="spinner" style="width:14px;height:14px;border-width:2px;border-top-color:#fff;"></div> Saving...';
                     saveBtn.disabled = true;
                     try {
                         await window.CMS.set('site_settings', 'online_course_config', { photoUrl, bodyText, targetUrl }, { merge: true });
                         showToast('Online Courses Highlight saved.', 'success');
-                    } catch(e) { 
+                    } catch (e) {
                         console.error("Save error:", e);
-                        showToast('Failed to save settings.', 'error'); 
+                        showToast('Failed to save settings.', 'error');
                     }
                     saveBtn.innerHTML = orig;
                     saveBtn.disabled = false;
@@ -1235,14 +1972,14 @@
                         if (match) videoId = match[1];
                         else { showToast('Invalid YouTube URL format.', 'error'); return; }
                     }
-                    
+
                     const orig = saveSettingsBtn.innerHTML;
                     saveSettingsBtn.innerHTML = '<div class="spinner" style="width:14px;height:14px;border-width:2px;border-top-color:#fff;"></div> Saving...';
                     saveSettingsBtn.disabled = true;
                     try {
                         await window.CMS.update('site_settings', 'general', { youtubeVideoId: videoId });
                         showToast('Settings saved successfully.', 'success');
-                    } catch(e) { showToast('Failed to save settings.', 'error'); }
+                    } catch (e) { showToast('Failed to save settings.', 'error'); }
                     saveSettingsBtn.innerHTML = orig;
                     saveSettingsBtn.disabled = false;
                 });
@@ -1253,8 +1990,8 @@
          * ENQUIRIES
          * ══════════════════════════════════ */
         async function loadEnquiries() {
-            const snap = await window.CMS.getAll('enquiries', {orderBy: 'submittedAt', orderDir: 'desc'});
-            let unread=0, total=0, rows='';
+            const snap = await window.CMS.getAll('enquiries', { orderBy: 'submittedAt', orderDir: 'desc' });
+            let unread = 0, total = 0, rows = '';
             snap.forEach(d => {
                 total++;
                 const data = d.data();
@@ -1263,18 +2000,18 @@
                 const statusBadge = !data.read
                     ? `<span class="badge-new">New</span>`
                     : `<span class="badge-read">Read</span>`;
-                rows += `<tr class="${!data.read?'unread-row':''}" data-search="${(data.studentName||'')+(data.parentName||'')+(data.phone||'')+(data.class||'')}">
+                rows += `<tr class="${!data.read ? 'unread-row' : ''}" data-search="${(data.studentName || '') + (data.parentName || '') + (data.phone || '') + (data.class || '')}">
                     <td>${total}</td>
-                    <td><strong>${data.studentName||''}</strong></td>
-                    <td>${data.parentName||''}</td>
-                    <td>${data.class||''}</td>
-                    <td>${data.board||''}</td>
-                    <td>${data.phone||''}</td>
-                    <td>${data.preferredTime||''}</td>
+                    <td><strong>${data.studentName || ''}</strong></td>
+                    <td>${data.parentName || ''}</td>
+                    <td>${data.class || ''}</td>
+                    <td>${data.board || ''}</td>
+                    <td>${data.phone || ''}</td>
+                    <td>${data.preferredTime || ''}</td>
                     <td>${date}</td>
                     <td>${statusBadge}</td>
                     <td><div class="table-actions">
-                        ${!data.read?`<button class="admin-mark-btn" onclick="markRead('${d.id}')"><i class="fas fa-check"></i></button>`:''}
+                        ${!data.read ? `<button class="admin-mark-btn" onclick="markRead('${d.id}')"><i class="fas fa-check"></i></button>` : ''}
                         <button class="admin-delete-btn" onclick="deleteEnquiry('${d.id}')"><i class="fas fa-trash"></i></button>
                     </div></td>
                 </tr>`;
@@ -1285,7 +2022,7 @@
             document.getElementById('enquiry-stats-row').innerHTML = `
                 <div class="stat-card"><div class="stat-card-icon blue"><i class="fas fa-inbox"></i></div><div><div class="stat-card-value">${total}</div><div class="stat-card-label">Total Enquiries</div></div></div>
                 <div class="stat-card"><div class="stat-card-icon orange"><i class="fas fa-clock"></i></div><div><div class="stat-card-value">${unread}</div><div class="stat-card-label">Unread</div></div></div>
-                <div class="stat-card"><div class="stat-card-icon green"><i class="fas fa-check-circle"></i></div><div><div class="stat-card-value">${total-unread}</div><div class="stat-card-label">Read</div></div></div>`;
+                <div class="stat-card"><div class="stat-card-icon green"><i class="fas fa-check-circle"></i></div><div><div class="stat-card-value">${total - unread}</div><div class="stat-card-label">Read</div></div></div>`;
 
             // Badge
             const badge = document.getElementById('unread-badge');
@@ -1311,12 +2048,12 @@
             try {
                 await window.CMS.remove('enquiries', id);
                 showToast('Enquiry deleted'); loadEnquiries();
-            } catch(err) { showToast('Error deleting.','error'); console.error(err); }
+            } catch (err) { showToast('Error deleting.', 'error'); console.error(err); }
         };
         document.getElementById('mark-all-read-btn').addEventListener('click', async () => {
             const snap = await window.CMS.getAll('enquiries');
             const updates = [];
-            snap.forEach(d => { if(!d.data().read) updates.push(window.CMS.update('enquiries', d.id, {read:true,status:'read'})); });
+            snap.forEach(d => { if (!d.data().read) updates.push(window.CMS.update('enquiries', d.id, { read: true, status: 'read' })); });
             await Promise.all(updates);
             showToast('All marked as read'); loadEnquiries();
         });
@@ -1328,25 +2065,25 @@
         /* ══════════════════════════════════
          * GENERIC CRUD HELPERS
          * ══════════════════════════════════ */
-        function buildCrudForm(fields, onSave, onCancel, existing=null, coll='', docId='') {
+        function buildCrudForm(fields, onSave, onCancel, existing = null, coll = '', docId = '') {
             let html = `<div class="crud-form"><h3>${existing ? '✏️ Edit' : '➕ Add New'}</h3>`;
             fields.forEach(f => {
-                const val = existing ? (existing[f.key]||'') : (f.default||'');
+                const val = existing ? (existing[f.key] || '') : (f.default || '');
                 html += `<label class="admin-label">${f.label}</label>`;
-                if (f.type==='textarea') html += `<textarea class="admin-textarea" data-key="${f.key}">${val}</textarea>`;
-                else if (f.type==='number') html += `<input class="admin-input" type="number" data-key="${f.key}" value="${val}">`;
-                else if (f.type==='toggle') html += `<div style="margin-bottom:16px"><label class="toggle-switch"><input type="checkbox" data-key="${f.key}" ${val?'checked':''}><span class="toggle-slider"></span></label></div>`;
-                else if (f.type==='stars') {
-                    const s=val||5; html+=`<div class="star-selector" data-key="${f.key}">`;
-                    for(let i=1;i<=5;i++) html+=`<span class="${i<=s?'active':''}" data-val="${i}">★</span>`;
-                    html+=`</div>`;
-                } else if (f.type==='file') {
+                if (f.type === 'textarea') html += `<textarea class="admin-textarea" data-key="${f.key}">${val}</textarea>`;
+                else if (f.type === 'number') html += `<input class="admin-input" type="number" data-key="${f.key}" value="${val}">`;
+                else if (f.type === 'toggle') html += `<div style="margin-bottom:16px"><label class="toggle-switch"><input type="checkbox" data-key="${f.key}" ${val ? 'checked' : ''}><span class="toggle-slider"></span></label></div>`;
+                else if (f.type === 'stars') {
+                    const s = val || 5; html += `<div class="star-selector" data-key="${f.key}">`;
+                    for (let i = 1; i <= 5; i++) html += `<span class="${i <= s ? 'active' : ''}" data-val="${i}">★</span>`;
+                    html += `</div>`;
+                } else if (f.type === 'file') {
                     if (existing && docId && (coll === 'faculty' || coll === 'results' || coll === 'courses' || coll === 'updates')) {
                         let pfx = 'faculty';
                         if (coll === 'results') pfx = 'result';
                         if (coll === 'courses') pfx = 'course';
                         if (coll === 'updates') pfx = 'update';
-                        
+
                         let ucfPrefix = pfx.charAt(0).toUpperCase() + pfx.slice(1);
 
                         html += `
@@ -1357,9 +2094,9 @@
                             </div>
                         `;
                     } else {
-                        html+=`<label class="upload-btn"><i class="fas fa-upload"></i> Upload Photo<input type="file" accept="image/*" data-key="${f.key}"></label><br><br>`;
+                        html += `<label class="upload-btn"><i class="fas fa-upload"></i> Upload Photo<input type="file" accept="image/*" data-key="${f.key}"></label><br><br>`;
                     }
-                    if(existing&&existing[f.key]) html+=`<img src="${existing[f.key]}" class="photo-preview"><br>`;
+                    if (existing && existing[f.key]) html += `<img src="${existing[f.key]}" class="photo-preview"><br>`;
                 } else html += `<input class="admin-input" data-key="${f.key}" value="${val}">`;
             });
             html += `<div style="display:flex;gap:10px;margin-top:16px;">
@@ -1373,11 +2110,11 @@
             const data = {};
             container.querySelectorAll('[data-key]').forEach(el => {
                 const key = el.dataset.key;
-                if (el.type==='checkbox') data[key]=el.checked;
-                else if (el.type==='file') data[key]=el.files?.[0]||null;
-                else if (el.type==='number') data[key]=parseInt(el.value)||0;
-                else if (el.classList.contains('star-selector')) data[key]=el.querySelectorAll('.active').length;
-                else data[key]=el.value;
+                if (el.type === 'checkbox') data[key] = el.checked;
+                else if (el.type === 'file') data[key] = el.files?.[0] || null;
+                else if (el.type === 'number') data[key] = parseInt(el.value) || 0;
+                else if (el.classList.contains('star-selector')) data[key] = el.querySelectorAll('.active').length;
+                else data[key] = el.value;
             });
             return data;
         }
@@ -1387,7 +2124,7 @@
                 sel.querySelectorAll('span').forEach(star => {
                     star.addEventListener('click', () => {
                         const val = parseInt(star.dataset.val);
-                        sel.querySelectorAll('span').forEach((s,i) => s.classList.toggle('active', i<val));
+                        sel.querySelectorAll('span').forEach((s, i) => s.classList.toggle('active', i < val));
                     });
                 });
             });
@@ -1397,32 +2134,32 @@
          * COURSES (Expanded)
          * ══════════════════════════════════ */
         const courseFields = [
-            { key:'title', label:'Course Title' },
-            { key:'board', label:'Board / Tags (comma separated)' },
-            { key:'description', label:'Description', type:'textarea' },
-            { key:'price', label:'Price (₹)', type:'number', default:0 },
-            { key:'duration', label:'Duration (e.g. 12 months)' },
-            { key:'photoUrl', label:'Course Image (4:3)', type:'file' },
-            { key:'order', label:'Display Order', type:'number', default:1 },
-            { key:'active', label:'Active', type:'toggle', default:true }
+            { key: 'title', label: 'Course Title' },
+            { key: 'board', label: 'Board / Tags (comma separated)' },
+            { key: 'description', label: 'Description', type: 'textarea' },
+            { key: 'price', label: 'Price (₹)', type: 'number', default: 0 },
+            { key: 'duration', label: 'Duration (e.g. 12 months)' },
+            { key: 'photoUrl', label: 'Course Image (4:3)', type: 'file' },
+            { key: 'order', label: 'Display Order', type: 'number', default: 1 },
+            { key: 'active', label: 'Active', type: 'toggle', default: true }
         ];
 
         async function loadCoursesPanel() {
-            const snap = await window.CMS.getAll('courses', {orderBy: 'order'});
-            let html='';
+            const snap = await window.CMS.getAll('courses', { orderBy: 'order' });
+            let html = '';
             snap.forEach(d => {
                 const data = d.data();
-                const statusBadge = data.active!==false
+                const statusBadge = data.active !== false
                     ? '<span class="status-active"><i class="fas fa-circle" style="font-size:6px"></i> Active</span>'
                     : '<span class="status-inactive"><i class="fas fa-circle" style="font-size:6px"></i> Inactive</span>';
                 const priceStr = data.price ? ` | ₹${data.price}` : '';
                 const durStr = data.duration ? ` | ${data.duration}` : '';
-                html += `<div class="crud-item" data-search="${(data.title||'').toLowerCase()} ${(data.board||'').toLowerCase()}">
+                html += `<div class="crud-item" data-search="${(data.title || '').toLowerCase()} ${(data.board || '').toLowerCase()}">
                     <div class="crud-item-info" style="display: flex; gap: 12px; align-items: center;">
                         ${data.photoUrl ? `<img src="${data.photoUrl}" style="width: 40px; height: 40px; border-radius: 6px; object-fit: cover; flex-shrink: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">` : `<div style="width: 40px; height: 40px; border-radius: 6px; display: flex; align-items: center; justify-content: center; background: rgba(30, 111, 190, 0.08); flex-shrink: 0;"><i class="fas fa-book" style="color:var(--accent);"></i></div>`}
                         <div>
                             <h4 style="margin-bottom:2px;">${data.title} ${statusBadge}</h4>
-                            <p style="margin:0;">${data.board||''} | Order: ${data.order||0}${priceStr}${durStr}</p>
+                            <p style="margin:0;">${data.board || ''} | Order: ${data.order || 0}${priceStr}${durStr}</p>
                         </div>
                     </div>
                     <div class="crud-item-actions">
@@ -1437,7 +2174,7 @@
         document.getElementById('course-search-admin').addEventListener('input', (e) => {
             const q = e.target.value.toLowerCase();
             document.querySelectorAll('#courses-list .crud-item').forEach(item => {
-                item.style.display = (item.dataset.search||'').includes(q)||q==='' ? '' : 'none';
+                item.style.display = (item.dataset.search || '').includes(q) || q === '' ? '' : 'none';
             });
         });
 
@@ -1460,7 +2197,7 @@
                 await window.CMS.update('courses', docId, { photoUrl: '' });
                 showToast('Photo removed instantly.');
                 editCourse(docId);
-            } catch(err) {
+            } catch (err) {
                 showToast('Error removing photo.', 'error');
             }
         }
@@ -1473,78 +2210,78 @@
             newInput.addEventListener('change', async (e) => {
                 const file = e.target.files[0];
                 if (!file) return;
-                window.openCropper(file, 4/3, async (croppedFile) => {
+                window.openCropper(file, 4 / 3, async (croppedFile) => {
                     await uploadCoursePhoto(croppedFile, docId);
                 });
             });
         }
 
-        function showCourseForm(existing=null, docId=null) {
+        function showCourseForm(existing = null, docId = null) {
             const area = document.getElementById('course-form-area');
             area.innerHTML = buildCrudForm(courseFields, null, null, existing, 'courses', docId);
             if (existing && docId) attachCourseUploadListener(docId);
             area.querySelector('.crud-save-btn').addEventListener('click', async () => {
                 showToast('Saving...', 'success');
                 const data = getCrudFormData(area);
-                data.tags = (data.board||'').split(',').map(t=>t.trim()).filter(Boolean);
+                data.tags = (data.board || '').split(',').map(t => t.trim()).filter(Boolean);
                 data.updated_at = Date.now();
                 if (!docId) data.created_at = Date.now();
-                
+
                 const file = data.photoUrl; delete data.photoUrl;
                 try {
                     let id = docId;
                     if (docId) await window.CMS.update('courses', docId, data);
-                    else { const r=await window.CMS.add('courses', data); id = r.id; }
-                    
+                    else { const r = await window.CMS.add('courses', data); id = r.id; }
+
                     if (file && file instanceof File) {
-                        window.openCropper(file, 4/3, async (croppedFile) => {
+                        window.openCropper(file, 4 / 3, async (croppedFile) => {
                             const url = await window.CMS.uploadImage(croppedFile);
                             await window.CMS.update('courses', id, { photoUrl: url });
                             showToast('Course saved with cropped photo.');
-                            area.innerHTML=''; loadCoursesPanel();
+                            area.innerHTML = ''; loadCoursesPanel();
                         });
                         return;
                     }
-                    showToast('Course saved. Changes live.'); area.innerHTML=''; loadCoursesPanel();
-                } catch(err) { showToast('Error saving.','error'); console.error(err); }
+                    showToast('Course saved. Changes live.'); area.innerHTML = ''; loadCoursesPanel();
+                } catch (err) { showToast('Error saving.', 'error'); console.error(err); }
             });
-            area.querySelector('.crud-cancel-btn').addEventListener('click', () => { area.innerHTML=''; });
+            area.querySelector('.crud-cancel-btn').addEventListener('click', () => { area.innerHTML = ''; });
         }
 
         window.editCourse = async (id) => {
             const snap = await window.CMS.get('courses', id);
-            if (snap.exists()) { const d=snap.data(); d.board=(d.tags||[d.board||'']).join(', '); showCourseForm(d,id); }
+            if (snap.exists()) { const d = snap.data(); d.board = (d.tags || [d.board || '']).join(', '); showCourseForm(d, id); }
         };
         window.deleteCourse = async (id) => {
             if (!confirm('Delete this course?')) return;
             try {
                 await window.CMS.remove('courses', id); showToast('Course deleted.'); loadCoursesPanel();
-            } catch(err) { showToast('Error deleting.','error'); console.error(err); }
+            } catch (err) { showToast('Error deleting.', 'error'); console.error(err); }
         };
 
         /* ══════════════════════════════════
          * FACULTY (Expanded)
          * ══════════════════════════════════ */
         const facultyFields = [
-            { key:'name', label:'Name' },
-            { key:'role', label:'Role' },
-            { key:'subject', label:'Subject' },
-            { key:'experience', label:'Experience (e.g. 10+ years)' },
-            { key:'bio', label:'Bio / Description', type:'textarea' },
-            { key:'order', label:'Display Order', type:'number', default:1 },
-            { key:'photoUrl', label:'Photo', type:'file' }
+            { key: 'name', label: 'Name' },
+            { key: 'role', label: 'Role' },
+            { key: 'subject', label: 'Subject' },
+            { key: 'experience', label: 'Experience (e.g. 10+ years)' },
+            { key: 'bio', label: 'Bio / Description', type: 'textarea' },
+            { key: 'order', label: 'Display Order', type: 'number', default: 1 },
+            { key: 'photoUrl', label: 'Photo', type: 'file' }
         ];
 
         async function loadFacultyPanel() {
-            const snap = await window.CMS.getAll('faculty', {orderBy: 'order'});
-            let html='';
+            const snap = await window.CMS.getAll('faculty', { orderBy: 'order' });
+            let html = '';
             snap.forEach(d => {
                 const data = d.data();
                 const expStr = data.experience ? ` | ${data.experience}` : '';
                 html += `<div class="crud-item">
                     <div class="crud-item-info">
                         <h4>${data.name}</h4>
-                        <p>${data.role||''} | ${data.subject||''}${expStr}</p>
+                        <p>${data.role || ''} | ${data.subject || ''}${expStr}</p>
                     </div>
                     <div class="crud-item-actions">
                         <button class="admin-edit-btn" onclick="editFaculty('${d.id}')"><i class="fas fa-pen"></i> Edit</button>
@@ -1575,7 +2312,7 @@
                 await window.CMS.update('faculty', docId, { photoUrl: '' });
                 showToast('Photo removed instantly.');
                 editFaculty(docId); // Re-render the form to clear preview and hide remove button
-            } catch(err) {
+            } catch (err) {
                 showToast('Error removing photo.', 'error');
             }
         }
@@ -1595,7 +2332,7 @@
             });
         }
 
-        function showFacultyForm(existing=null, docId=null) {
+        function showFacultyForm(existing = null, docId = null) {
             const area = document.getElementById('faculty-form-area');
             area.innerHTML = buildCrudForm(facultyFields, null, null, existing, 'faculty', docId);
             if (existing && docId) attachFacultyUploadListener(docId);
@@ -1607,54 +2344,54 @@
                     let id = docId;
                     if (docId) await window.CMS.update('faculty', docId, data);
                     else { const r = await window.CMS.add('faculty', data); id = r.id; }
-                    
+
                     if (file && file instanceof File) {
                         // Use interactive cropper even on initial save if file exists
                         window.openCropper(file, 1, async (croppedFile) => {
                             const url = await window.CMS.uploadImage(croppedFile);
                             await window.CMS.update('faculty', id, { photoUrl: url });
                             showToast('Faculty saved with cropped photo.');
-                            area.innerHTML=''; loadFacultyPanel();
+                            area.innerHTML = ''; loadFacultyPanel();
                         });
                         return; // Exit as openCropper handles the final save
                     }
-                    showToast('Faculty saved.'); area.innerHTML=''; loadFacultyPanel();
-                } catch(err) { showToast('Error saving.','error'); console.error(err); }
+                    showToast('Faculty saved.'); area.innerHTML = ''; loadFacultyPanel();
+                } catch (err) { showToast('Error saving.', 'error'); console.error(err); }
             });
-            area.querySelector('.crud-cancel-btn').addEventListener('click', () => { area.innerHTML=''; });
+            area.querySelector('.crud-cancel-btn').addEventListener('click', () => { area.innerHTML = ''; });
         }
 
-        window.editFaculty = async (id) => { 
+        window.editFaculty = async (id) => {
             try {
-                const s=await window.CMS.get('faculty',id); 
-                if(s.exists()) showFacultyForm(s.data(),id); 
-                else showToast('Faculty not found','error');
-            } catch(err) { showToast('Error loading.','error'); }
+                const s = await window.CMS.get('faculty', id);
+                if (s.exists()) showFacultyForm(s.data(), id);
+                else showToast('Faculty not found', 'error');
+            } catch (err) { showToast('Error loading.', 'error'); }
         };
-        window.deleteFaculty = async (id) => { 
-            if(!confirm('Delete?'))return; 
+        window.deleteFaculty = async (id) => {
+            if (!confirm('Delete?')) return;
             try {
-                await window.CMS.remove('faculty',id); showToast('Deleted.'); loadFacultyPanel(); 
-            } catch(err) { showToast('Error deleting.','error'); }
+                await window.CMS.remove('faculty', id); showToast('Deleted.'); loadFacultyPanel();
+            } catch (err) { showToast('Error deleting.', 'error'); }
         };
 
         /* ══════════════════════════════════
          * RESULTS (Expanded w/ rank)
          * ══════════════════════════════════ */
         const resultFields = [
-            { key:'studentName', label:'Student Name' },
-            { key:'exam', label:'Exam (e.g. CBSE 10th)' },
-            { key:'score', label:'Score (e.g. 95%)' },
-            { key:'rank', label:'Rank (optional)' },
-            { key:'year', label:'Year' },
-            { key:'initials', label:'Initials (e.g. PP)' },
-            { key:'order', label:'Display Order', type:'number', default:1 },
-            { key:'photoUrl', label:'Photo', type:'file' }
+            { key: 'studentName', label: 'Student Name' },
+            { key: 'exam', label: 'Exam (e.g. CBSE 10th)' },
+            { key: 'score', label: 'Score (e.g. 95%)' },
+            { key: 'rank', label: 'Rank (optional)' },
+            { key: 'year', label: 'Year' },
+            { key: 'initials', label: 'Initials (e.g. PP)' },
+            { key: 'order', label: 'Display Order', type: 'number', default: 1 },
+            { key: 'photoUrl', label: 'Photo', type: 'file' }
         ];
 
         async function loadResultsPanel() {
-            const snap = await window.CMS.getAll('results', {orderBy: 'order'});
-            let html='';
+            const snap = await window.CMS.getAll('results', { orderBy: 'order' });
+            let html = '';
             snap.forEach(d => {
                 const data = d.data();
                 const rankStr = data.rank ? ` | Rank: ${data.rank}` : '';
@@ -1691,7 +2428,7 @@
                 await window.CMS.update('results', docId, { photoUrl: '' });
                 showToast('Photo removed instantly.');
                 editResult(docId); // Re-render the form
-            } catch(err) {
+            } catch (err) {
                 showToast('Error removing photo.', 'error');
             }
         }
@@ -1711,7 +2448,7 @@
             });
         }
 
-        function showResultForm(existing=null, docId=null) {
+        function showResultForm(existing = null, docId = null) {
             const area = document.getElementById('result-form-area');
             area.innerHTML = buildCrudForm(resultFields, null, null, existing, 'results', docId);
             if (existing && docId) attachResultUploadListener(docId);
@@ -1721,35 +2458,35 @@
                 try {
                     let id = docId;
                     if (docId) await window.CMS.update('results', docId, data);
-                    else { const r = await window.CMS.add('results', data); id=r.id; }
-                    
+                    else { const r = await window.CMS.add('results', data); id = r.id; }
+
                     if (file && file instanceof File) {
                         window.openCropper(file, 1, async (croppedFile) => {
                             const url = await window.CMS.uploadImage(croppedFile);
                             await window.CMS.update('results', id, { photoUrl: url });
                             showToast('Result saved with cropped photo.');
-                            area.innerHTML=''; loadResultsPanel();
+                            area.innerHTML = ''; loadResultsPanel();
                         });
                         return;
                     }
-                    showToast('Result saved.'); area.innerHTML=''; loadResultsPanel();
-                } catch(err) { showToast('Error saving.','error'); console.error(err); }
+                    showToast('Result saved.'); area.innerHTML = ''; loadResultsPanel();
+                } catch (err) { showToast('Error saving.', 'error'); console.error(err); }
             });
-            area.querySelector('.crud-cancel-btn').addEventListener('click', () => { area.innerHTML=''; });
+            area.querySelector('.crud-cancel-btn').addEventListener('click', () => { area.innerHTML = ''; });
         }
 
-        window.editResult = async (id) => { 
+        window.editResult = async (id) => {
             try {
-                const s=await window.CMS.get('results',id); 
-                if(s.exists()) showResultForm(s.data(),id); 
-                else showToast('Result not found','error');
-            } catch(err) { showToast('Error loading.','error'); }
+                const s = await window.CMS.get('results', id);
+                if (s.exists()) showResultForm(s.data(), id);
+                else showToast('Result not found', 'error');
+            } catch (err) { showToast('Error loading.', 'error'); }
         };
-        window.deleteResult = async (id) => { 
-            if(!confirm('Delete?'))return; 
+        window.deleteResult = async (id) => {
+            if (!confirm('Delete?')) return;
             try {
-                await window.CMS.remove('results',id); showToast('Deleted.'); loadResultsPanel(); 
-            } catch(err) { showToast('Error deleting.','error'); }
+                await window.CMS.remove('results', id); showToast('Deleted.'); loadResultsPanel();
+            } catch (err) { showToast('Error deleting.', 'error'); }
         };
 
 
@@ -1758,13 +2495,13 @@
          * GALLERY (REFACTORED FOR MULTI-IMAGE)
          * ══════════════════════════════════ */
         async function loadGalleryPanel() {
-            const snap = await window.CMS.getAll('gallery', {orderBy: 'order'});
-            let html='';
-            
+            const snap = await window.CMS.getAll('gallery', { orderBy: 'order' });
+            let html = '';
+
             snap.forEach(d => {
                 const data = d.data();
                 const images = data.images || [];
-                
+
                 let imagesHtml = '';
                 images.forEach((url, index) => {
                     imagesHtml += `
@@ -1786,7 +2523,7 @@
                     <div class="admin-gallery-tile">
                         <div class="admin-gallery-header">
                             <div style="flex:1">
-                                <input type="text" class="admin-input" value="${data.label||''}" 
+                                <input type="text" class="admin-input" value="${data.label || ''}" 
                                     style="font-weight:700; font-size:1.1rem; border:none; padding:4px 8px; background:transparent;"
                                     onchange="updateGalleryLabel('${d.id}', this.value)">
                             </div>
@@ -1820,10 +2557,10 @@
             if (!file) return;
             showToast('Uploading...', 'success');
             try {
-                const croppedBlob = await cropImage(file, 4/3, 1024, 768);
+                const croppedBlob = await cropImage(file, 4 / 3, 1024, 768);
                 if (!croppedBlob) return;
                 const url = await window.CMS.uploadImage(croppedBlob);
-                
+
                 const snap = await window.CMS.get('gallery', id);
                 if (snap.exists()) {
                     const data = snap.data();
@@ -1833,7 +2570,7 @@
                     showToast('Image added to gallery.', 'success');
                     loadGalleryPanel();
                 }
-            } catch(err) {
+            } catch (err) {
                 showToast('Upload failed.', 'error');
                 console.error(err);
             }
@@ -1851,7 +2588,7 @@
                     showToast('Image removed.');
                     loadGalleryPanel();
                 }
-            } catch(err) {
+            } catch (err) {
                 showToast('Error removing image.', 'error');
             }
         };
@@ -1862,7 +2599,7 @@
                 await window.CMS.remove('gallery', id);
                 showToast('Section deleted.');
                 loadGalleryPanel();
-            } catch(err) { showToast('Error deleting.','error'); }
+            } catch (err) { showToast('Error deleting.', 'error'); }
         };
 
         window.updateGalleryLabel = async (id, label) => {
@@ -1870,43 +2607,43 @@
                 await window.CMS.update('gallery', id, { label });
                 showToast('Section renamed.');
                 loadGalleryPanel();
-            } catch(err) { showToast('Error renaming.','error'); }
+            } catch (err) { showToast('Error renaming.', 'error'); }
         };
 
         document.getElementById('add-gallery-btn').addEventListener('click', async () => {
             try {
                 const snap = await window.CMS.getAll('gallery');
-                await window.CMS.add('gallery', { 
-                    label: 'New Section', 
-                    images: [], 
-                    order: snap.size + 1, 
+                await window.CMS.add('gallery', {
+                    label: 'New Section',
+                    images: [],
+                    order: snap.size + 1,
                     active: true,
                     icon: 'fa-images'
                 });
                 showToast('New gallery section added.');
                 loadGalleryPanel();
-            } catch(err) { showToast('Error adding.','error'); }
+            } catch (err) { showToast('Error adding.', 'error'); }
         });
 
         /* ══════════════════════════════════
          * UPDATES
          * ══════════════════════════════════ */
         const updateFields = [
-            { key:'title', label:'Title' },
-            { key:'date', label:'Date (e.g. April 2025)' },
-            { key:'body', label:'Body', type:'textarea' },
-            { key:'photoUrl', label:'Image (4:3)', type:'file' },
-            { key:'linkUrl', label:'Redirect URL (Optional, e.g. https://...)' },
-            { key:'order', label:'Display Order', type:'number', default:1 },
-            { key:'active', label:'Active', type:'toggle', default:true }
+            { key: 'title', label: 'Title' },
+            { key: 'date', label: 'Date (e.g. April 2025)' },
+            { key: 'body', label: 'Body', type: 'textarea' },
+            { key: 'photoUrl', label: 'Image (4:3)', type: 'file' },
+            { key: 'linkUrl', label: 'Redirect URL (Optional, e.g. https://...)' },
+            { key: 'order', label: 'Display Order', type: 'number', default: 1 },
+            { key: 'active', label: 'Active', type: 'toggle', default: true }
         ];
 
         async function loadUpdatesPanel() {
-            const snap = await window.CMS.getAll('updates', {orderBy: 'order'});
-            let html='';
+            const snap = await window.CMS.getAll('updates', { orderBy: 'order' });
+            let html = '';
             snap.forEach(d => {
                 const data = d.data();
-                const statusBadge = data.active!==false
+                const statusBadge = data.active !== false
                     ? '<span class="status-active"><i class="fas fa-circle" style="font-size:6px"></i> Active</span>'
                     : '<span class="status-inactive"><i class="fas fa-circle" style="font-size:6px"></i> Inactive</span>';
                 html += `<div class="crud-item">
@@ -1914,7 +2651,7 @@
                         ${data.photoUrl ? `<img src="${data.photoUrl}" style="width: 40px; height: 40px; border-radius: 6px; object-fit: cover; flex-shrink: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">` : `<div style="width: 40px; height: 40px; border-radius: 6px; display: flex; align-items: center; justify-content: center; background: rgba(0, 194, 212, 0.08); flex-shrink: 0;"><i class="far fa-calendar-alt" style="color:var(--accent-light);"></i></div>`}
                         <div>
                             <h4 style="margin-bottom:2px;">${data.title} ${statusBadge}</h4>
-                            <p style="margin:0;">${data.date||''}</p>
+                            <p style="margin:0;">${data.date || ''}</p>
                         </div>
                     </div>
                     <div class="crud-item-actions">
@@ -1945,7 +2682,7 @@
                 await window.CMS.update('updates', docId, { photoUrl: '' });
                 showToast('Photo removed instantly.');
                 editUpdate(docId);
-            } catch(err) {
+            } catch (err) {
                 showToast('Error removing photo.', 'error');
             }
         }
@@ -1958,13 +2695,13 @@
             newInput.addEventListener('change', async (e) => {
                 const file = e.target.files[0];
                 if (!file) return;
-                window.openCropper(file, 4/3, async (croppedFile) => {
+                window.openCropper(file, 4 / 3, async (croppedFile) => {
                     await uploadUpdatePhoto(croppedFile, docId);
                 });
             });
         }
 
-        function showUpdateForm(existing=null, docId=null) {
+        function showUpdateForm(existing = null, docId = null) {
             const area = document.getElementById('update-form-area');
             area.innerHTML = buildCrudForm(updateFields, null, null, existing, 'updates', docId);
             if (existing && docId) attachUpdateUploadListener(docId);
@@ -1976,34 +2713,34 @@
                     let id = docId;
                     if (docId) await window.CMS.update('updates', docId, data);
                     else { const r = await window.CMS.add('updates', data); id = r.id; }
-                    
+
                     if (file && file instanceof File) {
-                        window.openCropper(file, 4/3, async (croppedFile) => {
+                        window.openCropper(file, 4 / 3, async (croppedFile) => {
                             const url = await window.CMS.uploadImage(croppedFile);
                             await window.CMS.update('updates', id, { photoUrl: url });
                             showToast('Update saved with auto-cropped image.');
-                            area.innerHTML=''; loadUpdatesPanel();
+                            area.innerHTML = ''; loadUpdatesPanel();
                         });
                         return;
                     }
-                    showToast('Update saved.'); area.innerHTML=''; loadUpdatesPanel();
-                } catch(err) { showToast('Error saving.','error'); console.error(err); }
+                    showToast('Update saved.'); area.innerHTML = ''; loadUpdatesPanel();
+                } catch (err) { showToast('Error saving.', 'error'); console.error(err); }
             });
-            area.querySelector('.crud-cancel-btn').addEventListener('click', () => { area.innerHTML=''; });
+            area.querySelector('.crud-cancel-btn').addEventListener('click', () => { area.innerHTML = ''; });
         }
 
-        window.editUpdate = async (id) => { 
+        window.editUpdate = async (id) => {
             try {
-                const s = await window.CMS.get('updates',id); 
-                if(s.exists()) showUpdateForm(s.data(),id); 
-                else showToast('Update not found','error');
-            } catch(err) { showToast('Error loading.','error'); }
+                const s = await window.CMS.get('updates', id);
+                if (s.exists()) showUpdateForm(s.data(), id);
+                else showToast('Update not found', 'error');
+            } catch (err) { showToast('Error loading.', 'error'); }
         };
-        window.deleteUpdate = async (id) => { 
-            if(!confirm('Delete?'))return; 
+        window.deleteUpdate = async (id) => {
+            if (!confirm('Delete?')) return;
             try {
-                await window.CMS.remove('updates',id); showToast('Deleted.'); loadUpdatesPanel(); 
-            } catch(err) { showToast('Error deleting.','error'); }
+                await window.CMS.remove('updates', id); showToast('Deleted.'); loadUpdatesPanel();
+            } catch (err) { showToast('Error deleting.', 'error'); }
         };
 
         /* ══════════════════════════════════
@@ -2011,29 +2748,29 @@
          * ══════════════════════════════════ */
         window.draggedImageInfo = null;
 
-        window.handleDragStart = function(e, sectionId, index) {
+        window.handleDragStart = function (e, sectionId, index) {
             window.draggedImageInfo = { sectionId, index };
             e.dataTransfer.effectAllowed = 'move';
             // Slight delay so the drag image generates before hiding the real element (optional)
         };
 
-        window.handleDragOver = function(e) {
+        window.handleDragOver = function (e) {
             e.preventDefault(); // Necessary to allow dropping
             e.dataTransfer.dropEffect = 'move';
         };
 
-        window.handleDragEnter = function(e) {
+        window.handleDragEnter = function (e) {
             e.preventDefault();
             const wrapper = e.target.closest('.admin-gallery-img-wrapper');
             if (wrapper) wrapper.classList.add('drag-over');
         };
 
-        window.handleDragLeave = function(e) {
+        window.handleDragLeave = function (e) {
             const wrapper = e.target.closest('.admin-gallery-img-wrapper');
             if (wrapper) wrapper.classList.remove('drag-over');
         };
 
-        window.handleDrop = async function(e, dropSectionId, dropIndex) {
+        window.handleDrop = async function (e, dropSectionId, dropIndex) {
             e.preventDefault();
             const wrapper = e.target.closest('.admin-gallery-img-wrapper');
             if (wrapper) wrapper.classList.remove('drag-over');
@@ -2049,11 +2786,11 @@
                 if (snap.exists()) {
                     const data = snap.data();
                     const images = data.images || [];
-                    
+
                     // Reorder array
                     const [movedImage] = images.splice(dragInfo.index, 1);
                     images.splice(dropIndex, 0, movedImage);
-                    
+
                     await window.CMS.update('gallery', dropSectionId, { images });
                     showToast('Reordered instantly.', 'success');
                     loadGalleryPanel();
@@ -2070,25 +2807,34 @@
     <!-- ══════════════════════════════════
           IMAGE CROPPING MODAL (SYSTEM RESTORE)
           ══════════════════════════════════ -->
-    <div id="cropModal" class="admin-modal" style="display:none; align-items:center; justify-content:center; z-index:100000; background:rgba(0,0,0,0.85); backdrop-filter:blur(10px);">
-        <div class="crud-form" style="max-width:90vw; width:600px; padding:25px; border-radius:20px; background:#fff; position:relative;">
-            <h3 style="margin-top:0; border-bottom:1px solid #eee; padding-bottom:15px; display:flex; align-items:center; gap:10px;">
+    <div id="cropModal" class="admin-modal"
+        style="display:none; align-items:center; justify-content:center; z-index:100000; background:rgba(0,0,0,0.85); backdrop-filter:blur(10px);">
+        <div class="crud-form"
+            style="max-width:90vw; width:600px; padding:25px; border-radius:20px; background:#fff; position:relative;">
+            <h3
+                style="margin-top:0; border-bottom:1px solid #eee; padding-bottom:15px; display:flex; align-items:center; gap:10px;">
                 <i class="fas fa-crop-alt" style="color:var(--accent);"></i> Professional Image Crop
             </h3>
-            
-            <div style="width:100%; height:400px; background:#f0f0f0; border-radius:12px; overflow:hidden; margin:20px 0; display:flex; align-items:center; justify-content:center;">
+
+            <div
+                style="width:100%; height:400px; background:#f0f0f0; border-radius:12px; overflow:hidden; margin:20px 0; display:flex; align-items:center; justify-content:center;">
                 <img id="cropper-image" src="" style="max-width:100%; max-height:100%; display:block;">
             </div>
 
             <div style="display:flex; justify-content:center; gap:12px; margin-bottom:20px;">
-                <button type="button" class="admin-mark-btn" onclick="cropper.zoom(0.1)" title="Zoom In"><i class="fas fa-search-plus"></i></button>
-                <button type="button" class="admin-mark-btn" onclick="cropper.zoom(-0.1)" title="Zoom Out"><i class="fas fa-search-minus"></i></button>
-                <button type="button" class="admin-mark-btn" onclick="cropper.rotate(90)" title="Rotate"><i class="fas fa-redo"></i></button>
+                <button type="button" class="admin-mark-btn" onclick="cropper.zoom(0.1)" title="Zoom In"><i
+                        class="fas fa-search-plus"></i></button>
+                <button type="button" class="admin-mark-btn" onclick="cropper.zoom(-0.1)" title="Zoom Out"><i
+                        class="fas fa-search-minus"></i></button>
+                <button type="button" class="admin-mark-btn" onclick="cropper.rotate(90)" title="Rotate"><i
+                        class="fas fa-redo"></i></button>
             </div>
 
             <div style="display:flex; gap:12px; justify-content:flex-end; border-top:1px solid #eee; padding-top:20px;">
-                <button type="button" class="btn-outline" onclick="closeCropper()"><i class="fas fa-times"></i> Cancel</button>
-                <button type="button" class="admin-save-btn" id="confirm-crop-btn"><i class="fas fa-check"></i> Crop & Save</button>
+                <button type="button" class="btn-outline" onclick="closeCropper()"><i class="fas fa-times"></i>
+                    Cancel</button>
+                <button type="button" class="admin-save-btn" id="confirm-crop-btn"><i class="fas fa-check"></i> Crop &
+                    Save</button>
             </div>
         </div>
     </div>
@@ -2099,7 +2845,7 @@
         /**
          * System Restore: Interactive Cropping Logic
          */
-        window.openCropper = function(file, aspect, callback) {
+        window.openCropper = function (file, aspect, callback) {
             const reader = new FileReader();
             reader.onload = (e) => {
                 const modal = document.getElementById('cropModal');
@@ -2141,7 +2887,7 @@
             reader.readAsDataURL(file);
         };
 
-        window.closeCropper = function() {
+        window.closeCropper = function () {
             const modal = document.getElementById('cropModal');
             modal.style.display = 'none';
             if (cropper) cropper.destroy();
@@ -2169,4 +2915,5 @@
         </div>
     </div>
 </body>
+
 </html>
