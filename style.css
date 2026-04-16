@@ -1520,6 +1520,18 @@ section {
     .google-badge { flex-direction: column; padding: 16px 20px; gap: 10px; }
 }
 
+/* ═══ AOS MOBILE FALLBACK ═══ */
+/* Ensures elements are visible if AOS is disabled or fails on mobile */
+@media (max-width: 768px) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+    }
+}
+
+
 /* Custom Creative Intro Styles */
 .intro-overlay {
     position: fixed;

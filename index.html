@@ -763,12 +763,11 @@
     <!-- Custom JS -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // 1. Initialize AOS (Disabled on mobile for performance)
+            // 1. Initialize AOS
             AOS.init({
                 duration: 700,
                 once: true,
-                offset: 50,
-                disable: window.innerWidth < 768
+                offset: 50
             });
 
             // 2. Navbar Scroll Effect (Passive)
